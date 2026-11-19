@@ -1,1 +1,746 @@
-
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DOKU | DataOps Studio</title><style>*{box-sizing:border-box}body{margin:0;font:16px/1.5 Inter,system-ui,sans-serif;background:#f4f6f8;color:#192e40}button,select,textarea{font:inherit}button{cursor:pointer;color:inherit}button:disabled{opacity:.44;cursor:default}button:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #368cf2;outline-offset:2px}h1,h2,h3,p{margin:0 0 .65em}h1{font-size:clamp(32px,4vw,50px);line-height:1.08;letter-spacing:-.045em}h2{font-size:21px;letter-spacing:-.025em}h3{font-size:17px}small,.help,.muted,.plain,.crumb,.legend,.mode-note{font-size:14px;color:#52667a}.mono,code,pre,.id-strip b{font-family:ui-monospace,monospace}.layout{display:grid;grid-template-columns:230px minmax(0,1fr);min-height:100vh}.rail{background:#152c3e;color:#d6e4ec;padding:24px 14px;position:sticky;top:0;height:100vh;overflow:auto;display:flex;flex-direction:column}.rail button{border:0;background:transparent;color:inherit;text-align:left}.logo{display:flex;gap:12px;align-items:center;font-size:32px;letter-spacing:.04em;margin-bottom:30px}.brand-mark{display:flex;gap:3px;transform:skew(-18deg)}.brand-mark i{display:block;background:#ff6f61;height:25px;width:6px}.brand-mark i:nth-child(2){height:34px}.rail-label,.eyebrow,.small-caption,.head-label{font-size:12px;font-weight:750;letter-spacing:.09em}.rail-label{color:#a0b9c7;margin:12px 8px}.nav-item,.step,.rail-bottom button{display:flex;gap:10px;align-items:center;width:100%;padding:9px 11px;border-radius:7px;font-size:14px}.rail .chosen,.rail button:hover{background:#2a4659;color:white}.step i{font-size:12px;width:19px;text-align:center}.complete i{color:#73d6ba}.journey-label{display:flex;justify-content:space-between}.rail-bottom{margin-top:auto;padding-top:24px}.rail-session{padding:10px;border-top:1px solid #385061}.rail-session small{color:#aac2d0}.topbar,.panel-h,.minihead,.actions,.top-actions,.topbrand,.page-title,.section-title,.next-box,.id-strip,.case-title,.head-label,.route-summary,.event,.service-head,.productband,.case-card,.group-list{display:flex;align-items:center;gap:12px}.topbar,.panel-h,.page-title,.section-title,.next-box,.productband,.case-card{justify-content:space-between}.topbar{background:#fff;padding:14px clamp(16px,3vw,44px);border-bottom:1px solid #dbe3e9}.topbrand{font-weight:750}.sim,.role{font-size:14px}.topdot,.dot{width:8px;height:8px;border-radius:50%;background:#138675;display:inline-block}.role{display:flex;align-items:center;gap:5px}.role select{padding:5px;border:1px solid #d8e1e6;border-radius:6px;background:#fff}.canvas{max-width:1540px;margin:auto;padding:22px clamp(16px,3vw,44px)}.crumb{margin-bottom:18px}.crumb b{color:#bcc7ce;margin:0 8px}.crumb button,.text-link,.service-links button{border:0;background:none;color:#146c70;padding:0}.hero,.productband{background:#163847;color:white;border-radius:17px;padding:clamp(24px,4vw,54px);margin-bottom:24px}.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center}.hero h1{font-size:clamp(40px,5vw,68px);margin:16px 0}.hero-copy p,.productband p{color:#d4e4e9}.hero-copy p{max-width:540px}.hero-label{color:#9fded1}.hero-map{background:#204653;padding:22px;border:1px solid #456571;border-radius:12px}.map-top,.map-leaves{display:flex;gap:8px;justify-content:space-between;flex-wrap:wrap}.map-top{font-size:12px;color:#b7d9d6}.map-core{display:flex;align-items:center;gap:12px;margin:22px auto 0;width:max-content}.map-core small,.map-core b{display:block;color:#d3e8e7}.map-branch{width:1px;height:24px;background:#8fbfb5;margin:auto}.map-leaves span{background:#315862;border-radius:6px;padding:6px 8px;font-size:12px}.btn,.group-chip{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:1px solid #d6dfe5;border-radius:8px;background:#fff;padding:8px 13px;font-size:14px;font-weight:650}.primary{background:#b72f45;color:white;border-color:#b72f45}.glass{color:white;background:transparent;border-color:#819ba3}.quiet{background:transparent}.actions,.group-list,.id-strip{flex-wrap:wrap}.section-title{margin:24px 0 14px}.section-title p,.page-title p{color:#52667a}.journeys{display:grid;grid-template-columns:repeat(auto-fit,minmax(174px,1fr));gap:12px}.journey-card,.case-card,.panel,.kpi,.empty-inline,.next-box{background:white;border:1px solid #dbe3e8;border-radius:12px}.journey-card{text-align:left;padding:17px;position:relative;color:#192e40}.journey-card:hover{border-color:#338b82}.journey-card h3{margin:6px 0}.journey-card p{font-size:14px;color:#536979}.card-go{position:absolute;top:17px;right:11px}.mark,.fact-symbol,.agent-dot,.service-state{display:inline-flex;align-items:center;justify-content:center;border-radius:9px;padding:8px}.journey-card .mark{margin-bottom:14px}.mint,.ok,.done{color:#086853;background:#e1f3ec}.violet{color:#655299;background:#efeafb}.coral{color:#943348;background:#fae8e9}.blue{color:#31639c;background:#e7eff9}.gold,.warn,.wait{color:#82541c;background:#fbf0d9}.journey-card{background:white}.pill{font-size:12px;font-weight:700;padding:4px 8px;border-radius:20px;display:inline-block}.neutral,.fact-symbol,.agent-dot{background:#edf2f5}.panel,.case-card,.next-box,.empty-inline{margin-bottom:16px}.panel-h{padding:15px 19px;border-bottom:1px solid #edf0f3}.panel-h h2,.page-title h1,.case-card h3{margin:0}.panel-b,.case-card,.empty-inline,.next-box,#modal-body{padding:18px}.work-cols{display:grid;grid-template-columns:minmax(0,2fr) minmax(220px,.85fr);gap:18px}.split{display:grid;grid-template-columns:1fr 1fr;gap:14px}.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:12px;margin:18px 0}.kpi{padding:16px}.kpi strong,.kpi small,.kpi span,.fact-mini b,.fact-mini small,.fact-mini span,.foundation-list b,.foundation-list small,.foundation-list span span,.route-summary small,.evidence-list small,.empty-inline span{display:block}.kpi strong{font-size:clamp(20px,2vw,31px);margin:4px 0}.id-strip{margin:12px 0;font-size:13px}.id-strip span{padding:4px 8px;background:#e8edf1;border-radius:5px}.head-label{margin-bottom:12px}.work-lead{margin-bottom:18px}.kv{margin:0}.kv div,.route-item,.service-row,.event,.fact-mini,.evidence-list button,.foundation-list button{border-bottom:1px solid #e8edf1;padding:10px 0}.kv dt,.service-row small,.fact-mini small,.eyebrow{color:#536a78;font-size:13px}.kv dd{margin:2px 0;font-weight:600;overflow-wrap:anywhere}.notice,.empty,blockquote{padding:14px;background:#edf4f6;border-radius:8px;margin:10px 0}.notice p{margin:5px 0 0}.notice.warn{background:#fbf0d9}.notice.ok{background:#e1f3ec}.chat-bubble,.service-row,.foundation-list button,.evidence-list button,.empty-inline,.architecture>div{display:flex;gap:12px;align-items:flex-start}.service-state{flex:none}.service-head{flex-wrap:wrap}.service-links{display:flex;gap:12px;font-size:13px}.service-row p,.chat-bubble p{margin:.35em 0}.fact-mini,.foundation-list button,.evidence-list button{display:block;background:none;width:100%;border:0;border-bottom:1px solid #e1e8eb;text-align:left}.evidence-list button,.foundation-list button{display:flex}.fact-mini span,.foundation-list span span{font-size:14px;color:#516878}.route-item{display:flex;flex-wrap:wrap;justify-content:space-between;font-size:14px}.route-summary{margin-bottom:10px}.tablebox{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;padding:9px;border-bottom:1px solid #e4eaee}th{background:#f4f7f8}.chart{width:100%;height:auto}.chart text{font-size:13px;fill:#596e79}.event time{font-weight:bold;color:#167566}.productband .eyebrow{color:#bcdcd7}.chat-area label,form label{display:block;font-weight:650;margin:12px 0 5px}textarea{border:1px solid #bccbd3;border-radius:8px;padding:10px;width:100%;resize:vertical}.suggest,.minihead,details{margin:12px 0}.tiny{margin:4px}.actions{margin-top:12px}.dialog,dialog{max-width:min(650px,94vw);width:650px;border:0;border-radius:15px;max-height:85vh;padding:0;color:inherit;box-shadow:0 12px 60px #172d3e44}dialog::backdrop{background:#13253394}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eef3f5;padding:12px}#toast{position:fixed;bottom:20px;right:20px;max-width:90vw;background:#193b47;color:white;padding:12px 18px;border-radius:8px;z-index:20}footer{display:flex;justify-content:space-between;gap:16px;margin:32px 0 8px;color:#627582;font-size:13px}.mobile-menu,.scrim{display:none}.primary-col,.inspector,.split>*{min-width:0}
+@media(max-width:1050px){.layout{grid-template-columns:195px minmax(0,1fr)}.work-cols{grid-template-columns:minmax(0,1fr)}.inspector{display:grid;grid-template-columns:1fr 1fr;gap:12px}.hero{grid-template-columns:1.5fr 1fr}.hero-map{padding:12px}}
+@media(max-width:760px){.layout{display:block}.rail{display:none}.rail.open{display:flex;position:fixed;width:255px;left:0;top:0;height:100dvh;z-index:12}.mobile-menu,.scrim{display:block}.scrim{position:fixed;inset:0;background:#1236;border:0;z-index:11}.mobile-menu{background:none;border:0}.topbar{gap:6px;padding:10px}.top-actions{margin-left:auto;gap:5px}.sim,.divider,.topdot,.hero-map{display:none}.topbrand{font-size:14px}.btn{padding:7px 10px}.role select{max-width:130px}.hero,.split,.inspector{display:block}.page-title,.case-card{align-items:flex-start;flex-direction:column}.journeys{grid-template-columns:repeat(2,minmax(0,1fr))}.journey-card{padding:12px}.canvas{padding:16px}.kpi-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.kpi{padding:10px}.top-actions .quiet span{display:none}.hero h1{font-size:42px}.topbar{justify-content:flex-start}.work-cols{display:block}footer{flex-wrap:wrap}}
+</style></head><body><div id="app"></div><dialog id="dialog" aria-labelledby="modal-title"><div class="panel-h"><h2 id="modal-title"></h2><button class="btn" data-a="cancel">Kapat</button></div><div id="modal-body"></div></dialog><div id="toast" hidden role="status"></div><script>window.SERVICE_CONTRACTS = {"AS-01": {"name": "AS-01 Request Classifier", "inputs": [{"field": "Talep metni", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "requestId", "requirement": "Optional (Platform Integration)", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "talep kanalı", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "kategori taksonomisi", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-02": {"name": "AS-02 Domain Classifier", "inputs": [{"field": "Talep metni", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "aday veri varlıkları", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "domain katalog surumu", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-03": {"name": "AS-03 Completeness / Ambiguity", "inputs": [{"field": "Talep", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "zorunlu alan seması", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "mevcut alan degerleri", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-04": {"name": "AS-04 Priority Input Extractor", "inputs": [{"field": "Talep", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "SLA", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "etki kapsamı", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "deadline", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-05": {"name": "AS-05 Demand Summary Generator", "inputs": [{"field": "Talep", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "sınıflandırma", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "eksik alan sonucları", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-06": {"name": "AS-06 Policy Applicability Che", "inputs": [{"field": "Talep", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "veri sınıfı", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "kullanım amacı", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "lokasyon", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "erisim", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-07": {"name": "AS-07 Compliance Evidence Gene", "inputs": [{"field": "Politika degerlendirmesi", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "onay kayıtları", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "veri sınıfları", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-08": {"name": "AS-08 Decision / Evidence Trac", "inputs": [{"field": "requestId", "requirement": "Optional (Platform Integration)", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "executionId", "requirement": "Optional (Platform Integration)", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "karar olayları", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "evidence URI", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-09": {"name": "AS-09 BRD Generator", "inputs": [{"field": "Olgun talep", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "domain", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "paydas", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "is hedefleri", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-10": {"name": "AS-10 Acceptance Criteria Gene", "inputs": [{"field": "BRD", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "is kuralları", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "basarı metrikleri", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-11": {"name": "AS-11 Requirement Quality Chec", "inputs": [{"field": "BRD", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "kabul kriterleri", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "requirement IDs", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-12": {"name": "AS-12 Business Impact Extracto", "inputs": [{"field": "BRD", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "stakeholder list", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "KPI tanımları", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-13": {"name": "AS-13 Technical Request Classi", "inputs": [{"field": "BRD", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "mevcut platform bilgisi", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "entegrasyon ihtiyacı", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-14": {"name": "AS-14 Technical Spec Generator", "inputs": [{"field": "BRD", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "source/target metadata", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "NFR", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "interface contracts", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-15": {"name": "AS-15 Design Rule Validator", "inputs": [{"field": "Technical spec", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "veri modeli", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "design decisions", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-16": {"name": "AS-16 Spec Quality Checker", "inputs": [{"field": "Technical spec", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "BRD", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "AC", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-17": {"name": "AS-17 Technical Impact / Compl", "inputs": [{"field": "Tech spec", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "etkilenen tablolar", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "job listesi", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "lineage", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-18": {"name": "AS-18 Code Review", "inputs": [{"field": "Diff", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "repo refs", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "tech spec", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "test results", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-19": {"name": "AS-19 Coding Standard Validato", "inputs": [{"field": "Code", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "language", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "target platform", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "standard version", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-20": {"name": "AS-20 Code Documentation Gener", "inputs": [{"field": "Source code", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "commits", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "spec", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "job metadata", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-21": {"name": "AS-21 Build / Pipeline Trace", "inputs": [{"field": "CI events", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "commit SHA", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "build logs", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "requestId", "requirement": "Optional (Platform Integration)", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-22": {"name": "AS-22 Unit / Integration Test", "inputs": [{"field": "AC", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "tech spec", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "interface schema", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "edge cases", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-23": {"name": "AS-23 Test Result Analyzer", "inputs": [{"field": "Test run logs", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "cases", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "expected vs actual", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-24": {"name": "AS-24 Test Evidence Summarizer", "inputs": [{"field": "Test runs", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "defects", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "AC coverage", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-25": {"name": "AS-25 Test Execution Trace", "inputs": [{"field": "Test run events", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "executionId", "requirement": "Optional (Platform Integration)", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "artifact refs", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-26": {"name": "AS-26 Deployment Readiness Che", "inputs": [{"field": "Release manifest", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "test evidence", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "approvals", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "rollback plan", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-27": {"name": "AS-27 Deployment Policy Checke", "inputs": [{"field": "Release plan", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "approver roles", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "target env", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-28": {"name": "AS-28 Release Risk Scorer", "inputs": [{"field": "Impact analysis", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "failed tests", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "rollback", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "criticality", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-29": {"name": "AS-29 Release Note Generator", "inputs": [{"field": "Release items", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "PRs", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "business impact", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "known issues", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-30": {"name": "AS-30 Deployment Trace", "inputs": [{"field": "Deployment events", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "buildId", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "changeId", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-31": {"name": "AS-31 Deployment / Package Fai", "inputs": [{"field": "Deploy logs", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "errors", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "manifest", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "rollback metadata", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-32": {"name": "AS-32 Service Usage / Adoption", "inputs": [{"field": "Usage events", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "consumer list", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "service SLA", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-33": {"name": "AS-33 Incident / Error Summary", "inputs": [{"field": "Incident tickets", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "alerts", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "logs", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "service impact", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}, "AS-34": {"name": "AS-34 Operational Trace Analyz", "inputs": [{"field": "Runtime logs", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "traces", "requirement": "Required", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "metrics", "requirement": "Conditional", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}, {"field": "requestId", "requirement": "Optional (Platform Integration)", "type": "JSON Schema ile netleştirilecek", "validation": "Eksik zorunlu bilgi → NEEDS_INPUT; kaynak kimliklerini tahmin etme"}]}};</script><script>(function(root){
+const pages=[
+{id:'demand',title:'Demand',sub:'Talebi olgunlaştır',cap:['Classification / Discovery','Quality','Prioritization','Documentation'],desc:'İhtiyacı netleştirin. Agent’lar mevcut katalog ve talep bilgisiyle uygun servisleri seçer.'},
+{id:'intake',title:'Intake',sub:'BRD ve Jira',cap:['Documentation'],desc:'Talep bağlamından BRD taslağı oluşturun; kullanıcı onayıyla Jira kaydı açın.'},
+{id:'compliance',title:'Compliance',sub:'Politika ve koşullar',cap:['Governance','Documentation'],desc:'Politika uygunluğunu değerlendirin; kullanım ve yayınlama koşullarını belirleyin.'},
+{id:'business',title:'Business Analysis',sub:'İş kuralları ve etki',cap:['Documentation','Quality','Prioritization'],desc:'Excel servis sözleşmelerindeki eksik girdileri chat üzerinden tamamlayın.'},
+{id:'design',title:'Technical Design',sub:'Tasarım ve mimari onay',cap:['Classification / Discovery','Documentation','Governance','Quality','Prioritization'],desc:'Yeni Network kaynağı ve Bronze yazımı için mimari onay kapısını uygulayın.'},
+{id:'development',title:'ETL Development',sub:'Kod ve performans',cap:['Documentation','Quality','Governance','Observability'],desc:'ETL çıktısını hazırlayın; prod bilgisi gerektiren servisleri platform runtime’ında yürütün.'},
+{id:'test',title:'Test & Evidence',sub:'Test özeti ve kanıt',cap:['Quality','Documentation','Observability'],desc:'Kabul kriterlerine bağlı testleri çalıştırın; sonuçları ve kanıtları birlikte görün.'},
+{id:'governance',title:'Governance Publish',sub:'Geliştirme sonrası yayın onayı',cap:['Governance','Documentation','Quality'],desc:'Toplanan metadata ve kalite kurallarını Governance onayından sonra ilgili uygulamalara yazın.'},
+{id:'release',title:'Release & Deploy',sub:'Kontrollü yayın',cap:['Quality','Governance','Prioritization','Documentation','Observability'],desc:'Hazırlık, politika ve risk sonuçlarıyla yayını onaylayın; deployment kanıtını bağlayın.'},
+{id:'live',title:'Canlı veri ürünü',sub:'DataOps observability',cap:['Observability','Quality'],desc:'Canlı veri ürününün SLA, kalite, pipeline ve kaynak kullanımını lifecycle geçmişiyle izleyin.'}
+];
+const specs=[
+['AS-01','Request Classifier','demand','Classification / Discovery','TARS',[],['request'],{group:'BUILD',reason:'Yeni Network kaynağı ve yeni birleşik veri ürünü ihtiyacı'}],
+['AS-02','Domain Classifier','demand','Classification / Discovery','TARS',['AS-01'],['request','candidateAssets'],{primaryDomain:'Roaming',secondaryDomain:'Network',catalogVersion:'DOMAIN-v7'}],
+['AS-03','Completeness / Ambiguity Check','demand','Quality','TARS',['AS-02'],['request'],{checked:'Amaç, sahiplik ve SLA zorunlulukları değerlendirildi'}],
+['PL-MATURE','Demand Confirmation','demand','Documentation','DOKU workflow',['AS-03'],['owner','purpose','sla'],{status:'CONFIRMED'},'requester'],
+['AS-04','Priority Input Extractor','demand','Prioritization','TARS',['PL-MATURE'],['request','sla','purpose'],{impact:'Roaming Commercial ülke performansı',priorityInputs:'Günlük karar ihtiyacı; finansal raporlamaya kaynak değildir'}],
+['AS-05','Demand Summary Generator','demand','Documentation','TARS',['AS-04'],['request','owner'],{summary:'Network TAP3 kullanımı ve faturalama net gelirini ülke/gün seviyesinde birleştiren veri ürünü'}],
+['AS-09','BRD Generator','intake','Documentation','TARS',['AS-05'],['request','domain'],{artifact:'BRD-RMG-142 v0.1',status:'DRAFT',requirements:['REQ-01: ülke/gün kullanım','REQ-02: net gelir','REQ-03: her gün 08:00']}],
+['PL-JIRA','Jira Demand Creator','intake','Documentation','Enterprise adapter',['AS-09'],[],{jiraKey:'DOKU-142',status:'Open'},'requester'],
+['AS-06','Policy Applicability Checker','compliance','Governance','TARS',['PL-JIRA'],['request','classification'],{policy:'POL-PRV-021 v2',decision:'CONDITIONAL',conditions:['Toplu çıktı; müşteri kimliği tüketim katmanında yok','Bronze kontrollü erişim','MetadataHub / SmartDQ yayını geliştirme sonrası onaylı']}],
+['AS-07','Compliance Evidence Generator','compliance','Documentation','TARS',['AS-06'],[],{decision:'APPROVED_WITH_CONDITIONS',policy:'POL-PRV-021 v2',publication:'DEFERRED_FOR_GOVERNANCE_APPROVAL'},'governance'],
+['AS-10','Acceptance Criteria Generator','business','Documentation','TARS',['AS-07'],['businessRules','successMetrics'],{criteria:['AC-01: ülke/gün anahtarı tekil','AC-02: tamlık ≥ %99,5','AC-03: ürün 08:00 öncesi hazır','AC-04: son 48 saat gelir geçici etiketli'],traceToRequirement:['REQ-01','REQ-02','REQ-03']},'requester'],
+['AS-11','Requirement Quality Checker','business','Quality','TARS',['AS-10'],[],{passStatus:'PASS',criticalGaps:0,coverage:'4 kabul kriteri gereksinimlere bağlı'}],
+['AS-12','Business Impact Extractor','business','Prioritization','TARS',['AS-10'],['stakeholders'],{impactedProcesses:['Roaming kampanya planlaması','Ülke performans analizi'],kpis:['Kullanım GB','Net gelir TRY'],consumers:['Roaming Commercial','Roaming Marketing']},'requester'],
+['AS-13','Technical Request Classifier','design','Classification / Discovery','TARS',['AS-11','AS-12'],[],{type:'NEW_SOURCE_AND_DATA_PRODUCT',platform:'Ozone / Iceberg + Spark + Trino'}],
+['AS-14','Technical Spec Generator','design','Documentation','TARS',['AS-13'],['nfr'],{spec:'SPEC-RMG-142 v1',source:'Network TAP3 + BILLING.FCT_ROAM_CHARGE_D',bronze:'bronze.DF_NET_ROAM_TAP3',gold:'gold.DF_ROAM_USAGE_REVENUE_D',ingestion:'Parametrik ham 1:1; Airflow günlük',lateArrival:'Son üç gün yeniden işlenir'},'requester'],
+['AS-15','Design Rule Validator','design','Governance','TARS',['AS-14'],[],{status:'ARCHITECT_APPROVAL_REQUIRED',rule:'DEMO-GR-BRONZE-01',reason:'Network’den yeni veri alımı ve Bronze’a yeni ham veri yazımı',scope:'Bu senaryo için kullanıcı tarafından belirtilen guardrail'}],
+['AS-16','Spec Quality Checker','design','Quality','TARS',['AS-14'],[],{passStatus:'PASS',requirementsCovered:'REQ-01 / 02 / 03',openCriticalIssues:0}],
+['AS-17','Technical Impact / Complexity Analyzer','design','Prioritization','TARS',['AS-14'],[],{impact:'1 yeni Bronze feed; 1 Silver dönüşüm; 1 Gold ürün',complexity:'Medium'}],
+['PL-ARCH','Architecture Approval Recorder','design','Governance','DOKU workflow',['AS-15','AS-16','AS-17'],[],{decision:'APPROVED',conditions:'Ham 1:1 ingestion; dar Bronze yetkisi; naming ve retention kontrolü'},'architect'],
+['PL-CODE','ETL Code Generator','development','Documentation','Model endpoint / DEV',['PL-ARCH'],['language'],{etlArtifact:'roaming_usage_revenue.py',commit:'demo-a7e31c9',branch:'feature/DOKU-142',language:'PySpark',pipeline:'dag_roaming_usage_revenue'},'delivery'],
+['AS-18','Code Review','development','Quality','TARS',['PL-CODE'],[],{criticalFindings:0,review:'PASS',note:'Partition filtresi ve geç kayıt yönetimi doğrulandı'}],
+['AS-19','Coding Standard Validator','development','Governance','TARS',['PL-CODE'],[],{passStatus:'PASS',standard:'Naming v1 / Spark template',checksPassed:8}],
+['AS-20','Code Documentation Generator','development','Documentation','TARS',['PL-CODE'],[],{artifact:'DOC-RMG-142',sections:['Kaynak eşlemesi','Dönüşüm kuralları','Runbook']}],
+['AS-21','Build / Pipeline Trace','development','Observability','TARS',['AS-18','AS-19'],[],{buildId:'BUILD-142-01',status:'SUCCESS',artifact:'etl-roaming-demo-v1'}],
+['PL-PERF','Performance Tuning Advisor','development','Observability','Model endpoint / governed PROD',['PL-CODE'],[],{scope:'Mevcut benzer roaming üretim iş yükü; yeni ürün henüz prod değil',dataAccess:'Yetkili read-only query plan ve toplu runtime metrikleri',baselineRuntimeMin:24,proposal:'event_date filtresini erken uygula; country/event_date partition pruning',automaticProductionChange:false,estimatedImprovement:'Öneri; henüz ölçülmedi'}],
+['AS-22','Unit / Integration Test Generator','test','Quality','TARS',['AS-21'],[],{testCases:12,coverage:'4 kabul kriteri',artifact:'TESTSET-142'}],
+['PL-TEST','Test Execution Service','test','Quality','QA runtime',['AS-22'],[],{runId:'TEST-142-01',passed:12,failed:0,completePct:99.8,uniquenessPct:100,readyAt:'07:42'},'qa'],
+['AS-23','Test Result Analyzer','test','Quality','TARS',['PL-TEST'],[],{passStatus:'PASS',passed:12,failed:0,criticalDefects:0}],
+['AS-24','Test Evidence Summarizer','test','Documentation','TARS',['AS-23'],[],{artifact:'QA-EVIDENCE-142',acCoverage:'4 / 4',defects:0}],
+['AS-25','Test Execution Trace','test','Observability','TARS',['PL-TEST','AS-24'],[],{testRun:'TEST-142-01',status:'COMPLETED',artifactRefs:['QA-EVIDENCE-142']}],
+['PL-GOVPACK','Governance Publication Pack Builder','governance','Documentation','DOKU native',['AS-24','AS-25'],[],{metadata:['İş tanımı','Owner','Sınıflandırma','Lineage','Retention'],qualityRules:['Completeness ≥ 99.5%','Uniqueness 100%','Freshness 08:00'],destinations:['MetadataHub','SmartDQ']}],
+['PL-GOVAPP','Governance Publication Approval','governance','Governance','DOKU workflow',['PL-GOVPACK'],[],{decision:'APPROVED',scope:'MetadataHub ve SmartDQ kayıtları',retention:'24 ay onaylandı'},'governance'],
+['PL-META','MetadataHub Publisher','governance','Documentation','Enterprise adapter',['PL-GOVAPP'],[],{catalogId:'MH-DP-RMG-017',version:1,written:['Owner','Glossary','Lineage','Classification','Retention']}],
+['PL-DQ','SmartDQ Rule Publisher','governance','Quality','Enterprise adapter',['PL-GOVAPP'],[],{ruleSet:'DQ-RMG-017',rules:3,status:'REGISTERED'}],
+['PL-PLAN','Release Manifest Builder','release','Documentation','DOKU native',['PL-META','PL-DQ'],['releaseWindow'],{release:'REL-RMG-2026-01',rollback:'Önceki sürüme dön; yeni feed ve DAG durdur; veri silme yok',target:'PROD'},'release'],
+['AS-26','Deployment Readiness Checker','release','Quality','TARS',['PL-PLAN'],[],{decision:'READY',tests:'12 / 12',approvals:'Architecture + Governance mevcut'}],
+['AS-27','Deployment Policy Checker','release','Governance','TARS',['PL-PLAN'],[],{decision:'PASS',window:'Onaylı pencere',target:'PROD'}],
+['AS-28','Release Risk Scorer','release','Prioritization','TARS',['PL-PLAN'],[],{risk:'LOW',criticalFailures:0,rollbackAvailable:true}],
+['AS-29','Release Note Generator','release','Documentation','TARS',['AS-26','AS-27','AS-28'],[],{artifact:'RN-RMG-142',change:'Network TAP3 ingestion ve ülke/gün kullanım-gelir ürünü'}],
+['PL-DEPLOY','ETL Deployment Service','release','Observability','CI/CD adapter',['AS-29'],[],{deployment:'DEP-142-01',status:'SUCCEEDED',product:'DP-RMG-017',version:'v1',environment:'PROD'},'release'],
+['AS-30','Deployment Trace','release','Observability','TARS',['PL-DEPLOY'],[],{deployment:'DEP-142-01',status:'SUCCEEDED',buildId:'BUILD-142-01'}],
+['PL-MONITOR','Product Telemetry Collector','live','Observability','DOKU / PROD',['AS-30'],[],{snapshot:'MON-142-01',freshness:'07:42',qualityPct:99.8,runSuccessPct:99.6,runtimeMin:18,rows:28400000,consumers:6,scope:'Son 7 gün sentetik demo telemetry replay'}],
+['PL-PROFILE','Production Quality Profiler','live','Quality','Model endpoint / governed PROD',['PL-MONITOR'],[],{rowCount:28400000,completePct:99.8,uniquePct:100,nullCountryPct:0.02,sensitiveData:'Sadece toplu profil; müşteri satırları UI’a taşınmaz'}],
+['PL-INCIDENT','Freshness Incident Analyzer','live','Observability','Model endpoint / governed PROD',['PL-MONITOR'],[],{incident:'INC-RMG-089',finding:'Network partition 07:15’te gecikmiş; SLA öncesi toparlandı',action:'Önceki geç kayıt tasarımını kullanarak backfill önerildi',status:'MONITORED',autoMutation:false}],
+['PL-LIVEPERF','Production Performance Analyzer','live','Observability','Model endpoint / governed PROD',['PL-MONITOR','PL-PERF'],[],{beforeMin:24,afterMin:18,improvementPct:25,comparison:'Sentetik replay; eş hacimli benchmark',knowledge:'Partition pruning önerisi doğrulandı; yeni talep için tekrar kullanılabilir'}]
+].map(a=>({id:a[0],name:a[1],page:a[2],cap:a[3],runtime:a[4],deps:a[5],fields:a[6],output:a[7],approval:a[8]||null}));
+const fields={request:{label:'Talep metni',sample:'Network TAP3 kaynağından roaming internet kullanımını alıp faturalama net geliriyle ülke/gün bazında bir veri ürünü oluşturmak istiyorum.'},owner:{label:'İş sahibi / owner',sample:'Roaming Commercial Product Owner'},purpose:{label:'İş amacı ve beklenen fayda',sample:'Ülke bazında kullanım ve gelir görünürlüğü; kampanya kararlarında aynı veri ürününü kullanmak.'},sla:{label:'SLA / hazır olma beklentisi',sample:'Günlük 08:00; tamlık en az %99,5.'},businessRules:{label:'İş kuralları (AS-10)',sample:'Net gelir KDV hariç ve indirim sonrası TRY; olay gününün kuru; son 48 saat geçici; ülke/gün tekil.'},successMetrics:{label:'Başarı metrikleri (AS-10)',sample:'Tamlık ≥ %99,5; 08:00 öncesi hazır; raporda ülke/gün tekilliği %100.'},stakeholders:{label:'Stakeholder list (AS-12)',sample:'Roaming Commercial PO, Roaming Finance, Network Data Owner, Data Governance.'},nfr:{label:'NFR / teknik beklentiler (AS-14)',sample:'Günlük artımlı yükleme; son 3 gün yeniden işleme; Bronze erişimi sınırlı; 24 ay retention önerisi.'},language:{label:'ETL teknoloji seçimi',sample:'PySpark / Spark SQL, Ozone Iceberg, Airflow'},releaseWindow:{label:'Release plan / yayın penceresi',sample:'12 Kasım 2026 22:00–23:00; rollback 15 dakika; sorumlu Data Operations.'}};
+function contractInput(s,id){const c=s.context, out=k=>s.runs.find(r=>r.serviceId===k)?.output, approval=s.decisions.find(d=>d.serviceId===id && d.decision==='APPROVED');const m={
+'AS-01':{requestText:c.request,requestId:s.lifecycle,channel:'DOKU UI'},
+'AS-02':{requestText:c.request,candidateAssets:c.candidateAssets,domainCatalogVersion:'DOMAIN-v7'},
+'AS-03':{request:c.request,mandatoryFieldSchema:['owner','purpose','sla'],currentValues:{owner:c.owner||null,purpose:c.purpose||null,sla:c.sla||null}},
+'AS-04':{request:c.request,SLA:c.sla,impactScope:c.purpose},
+'AS-05':{request:c.request,classification:out('AS-01'),missingFields:out('AS-03')},
+'AS-09':{matureDemand:{text:c.request,owner:c.owner,SLA:c.sla,purpose:c.purpose},domain:c.domain, businessObjectives:c.purpose},
+'AS-06':{request:c.request,dataClass:c.classification,purpose:c.purpose,location:'On-prem TR DC',access:'Controlled Bronze / aggregate consumption'},
+'AS-07':{policyEvaluation:out('AS-06'),approvalRecords:approval,dataClasses:[c.classification]},
+'AS-10':{BRD:{ref:c.brd,request:c.request},businessRules:c.businessRules,successMetrics:c.successMetrics},
+'AS-11':{BRD:c.brd,acceptanceCriteria:out('AS-10'),requirementIds:['REQ-01','REQ-02','REQ-03']},
+'AS-12':{BRD:c.brd,stakeholderList:c.stakeholders,KPIdefinitions:'Usage GB / Net revenue TRY'},
+'AS-13':{BRD:c.brd,currentPlatform:'Ozone Iceberg / Spark / Trino',integrationNeed:'Network TAP3 new ingestion'},
+'AS-14':{BRD:c.brd,sourceTargetMetadata:{source:c.candidateAssets,proposedTarget:'bronze.DF_NET_ROAM_TAP3 / gold.DF_ROAM_USAGE_REVENUE_D'},NFR:c.nfr},
+'AS-15':{technicalSpec:out('AS-14'),dataModel:'country / event_date aggregate',designDecisions:'New Network source to Bronze'},
+'AS-16':{technicalSpec:out('AS-14'),BRD:c.brd,AC:out('AS-10')},
+'AS-17':{techSpec:out('AS-14'),impactedTables:c.candidateAssets,lineage:'TAP3 -> Bronze -> Silver -> Gold'},
+'AS-18':{diff:'Synthetic ETL change set',repoRefs:c.commit,techSpec:c.technicalSpec},
+'AS-19':{code:c.etlArtifact,language:c.language,targetPlatform:'Spark / Iceberg',standardVersion:'Naming-v1'},
+'AS-20':{sourceCode:c.etlArtifact,commits:[c.commit],spec:c.technicalSpec},
+'AS-21':{CIevents:['lint:PASS','build:PASS'],commitSHA:c.commit,requestId:s.lifecycle},
+'AS-22':{AC:out('AS-10'),techSpec:out('AS-14'),interfaceSchema:'TAP3-DEMO-v1'},
+'AS-23':{testRunLogs:out('PL-TEST'),cases:out('AS-22')},
+'AS-24':{testRuns:[out('PL-TEST')],defects:[],ACcoverage:'4/4'},
+'AS-25':{testRunEvents:out('PL-TEST'),executionId:s.runs.find(r=>r.serviceId==='PL-TEST')?.executionId,artifactRefs:['TESTSET-142']},
+'AS-26':{releaseManifest:out('PL-PLAN'),testEvidence:out('AS-24'),approvals:s.decisions.filter(d=>['PL-ARCH','PL-GOVAPP'].includes(d.serviceId)),rollbackPlan:out('PL-PLAN')?.rollback},
+'AS-27':{releasePlan:out('PL-PLAN'),approverRoles:['Release Manager'],targetEnvironment:'PROD'},
+'AS-28':{impactAnalysis:out('AS-17'),failedTests:[],rollback:out('PL-PLAN')?.rollback},
+'AS-29':{releaseItems:[c.etlArtifact],PRs:['PR-DEMO-142'],businessImpact:out('AS-12')},
+'AS-30':{deploymentEvents:out('PL-DEPLOY'),buildId:'BUILD-142-01',changeId:c.release}};return m[id]||null;}
+const build={pages,specs,fields,contractInput};
+if(typeof module!=='undefined') module.exports=build;
+root.DokuBuild=build;
+})(typeof window!=='undefined'?window:globalThis);
+</script><script>(function (root) {
+'use strict';
+const build = root.DokuBuild || (typeof require === 'function' && require('./build.js'));
+const clone = value => JSON.parse(JSON.stringify(value));
+const now = () => new Date().toISOString();
+const pad = n => String(n).padStart(4, '0');
+const roles = {requester:'Talep sahibi / PO', architect:'Data Architect', governance:'Governance', delivery:'Data Engineer', qa:'QA', release:'Release Manager'};
+const groups = {
+ DISCOVER:{name:'Discover',label:'Veriyi keşfet',color:'violet',icon:'search',sample:'Ülke ve gün bazında roaming internet kullanımı ile net geliri birlikte gösteren bir veri ürünü var mı?'},
+ BUILD:{name:'Build',label:'Veri ürünü geliştir',color:'coral',icon:'layers',sample:build.fields.request.sample},
+ CONSUME:{name:'Consume',label:'Veri ürününü kullan',color:'blue',icon:'chart',sample:'Bu roaming ürününü kullanarak son yedi günde kullanımı en yüksek ülkeleri göster.'},
+ IMPROVE:{name:'Improve',label:'Sapmayı incele',color:'gold',icon:'trend',sample:'Bu roaming ürününde 17 Kasım’daki gecikmenin nedenini bul ve tekrarını azaltacak bir iyileştirme öner.'},
+ AUDIT:{name:'Audit',label:'Kanıtları doğrula',color:'mint',icon:'shield',sample:'Bu roaming ürününün mimari onayını, test sonuçlarını ve Governance yayın iznini kanıtlarıyla denetle.'}
+};
+const monthly='Pazarlama ekibi için ayrı bir aylık roaming yönetim raporu hazırla.';
+const pages = Object.fromEntries(build.pages.map(p=>[p.id,{title:p.title,sub:p.sub,desc:p.desc}]));
+Object.assign(pages,{
+ inventory:{title:'Katalog taraması',sub:'Ürün ve kaynaklar'}, coverage:{title:'Kapsam analizi',sub:'Karşılanan ihtiyaç'}, reuse:{title:'Yeniden kullanım kararı',sub:'Mevcut değer ve açıklar'},
+ scope:{title:'Tüketim sözleşmesi',sub:'Metrik ve yetki'}, query:{title:'Veri tüketimi',sub:'Sorgu ve sonuç'}, report:{title:'Rapor teslimi',sub:'Çıktı ve kaynak izi'},
+ signal:{title:'Operasyon sinyali',sub:'Tazelik ve kalite'}, diagnosis:{title:'Kök neden analizi',sub:'Kaynak ve işleme süresi'}, improvement:{title:'İyileştirme kararı',sub:'Runbook ve takip'},
+ controls:{title:'Kanıt taraması',sub:'Kontrol kapsamı'}, auditreport:{title:'Denetim özeti',sub:'Kanıt ve açık kontroller'}
+});
+const catalog=[
+ ['asset','Var olan veri ürünü','DP-RMG-004 · ülke/gün bazında roaming kullanım toplamı; gelir kapsam dışı.','Ürün kataloğu / v7','base'],
+ ['feed','Yeni kaynak adayı','Network TAP3 · gecikmeli gelebilen operatör kullanım dosyaları.','Network envanteri / v4','common'],
+ ['billing','Mevcut gelir kaynağı','BILLING.FCT_ROAM_CHARGE_D · net ücret ve indirimler.','Teknik katalog / v12','common'],
+ ['metric','Net gelir tanımı','Net gelir TRY · KDV hariç, indirim sonrası, olay gününün kuru.','İş sözlüğü / v3','common'],
+ ['policy','Tüketim politikası','POL-PRV-021 v2 · ülke/gün toplulaştırma, müşteri kimliği dışarı verilmez.','Politika kataloğu / v2','common'],
+ ['guardrail','Bronze karar kuralı','GR-BRONZE-01 · yeni Network kaynağının ham Bronze yazımı için Data Architect onayı gerekir.','Mimari kurallar / demo','common'],
+ ['operations','Operasyon referansı','DP-RMG-004 · 17 Kasım kaynak gecikmesi; 07:15 eksik partition, 07:42 hazır.','Operasyon kataloğu / sentetik geçmiş','base']
+].map(([kind,title,value,source,scope],i)=>({id:'CAT-'+(101+i),kind,title,value,source,scope,seed:true,rev:0}));
+const fields={...build.fields,
+ consumerPurpose:{label:'Tüketim amacı ve yetki kapsamı',sample:'Roaming Commercial için toplu ülke kırılımında karar desteği. Yalnızca ekip içi kullanım.'},
+ actionOwner:{label:'Aksiyon sorumlusu ve takip zamanı',sample:'Network Data Operations · sonraki üç günlük yüklemede partition geliş saatini izle.'}};
+const extras=[];
+function service(id,name,group,page,cap,runtime,deps=[],fields=[],approval=null){
+ extras.push({id,name,group,page,cap,runtime,deps,fields,approval,output:{}});
+}
+const discover='Classification / Discovery', obs='Observability', gov='Governance', doc='Documentation', quality='Quality';
+service('DS-CAT','Catalog Asset Search','DISCOVER','inventory',discover,'DOKU / Context Foundation');
+service('DS-GAP','Coverage Analyzer','DISCOVER','coverage',quality,'DOKU / Context Foundation',['DS-CAT']);
+service('DS-REUSE','Reuse Decision Recorder','DISCOVER','reuse',doc,'DOKU / Context Foundation',['DS-GAP']);
+service('CO-CONTRACT','Product Contract Resolver','CONSUME','scope',discover,'DOKU / Context Foundation');
+service('CO-ACCESS','Consumption Access Review','CONSUME','scope',gov,'DOKU workflow',['CO-CONTRACT'],['consumerPurpose'],'requester');
+service('CO-QUERY','Governed Aggregate Query','CONSUME','query',obs,'DOKU / governed PROD',['CO-ACCESS']);
+service('CO-REPORT','Consumption Report Builder','CONSUME','report',doc,'DOKU native',['CO-QUERY']);
+service('IM-SIGNAL','Freshness Signal Reader','IMPROVE','signal',obs,'DOKU / governed PROD');
+service('IM-CAUSE','Incident Root Cause Analyzer','IMPROVE','diagnosis',obs,'Model endpoint / governed PROD',['IM-SIGNAL']);
+service('IM-ACTION','Improvement Action Recorder','IMPROVE','improvement',quality,'DOKU workflow',['IM-CAUSE'],['actionOwner'],'delivery');
+service('AU-CHECK','Control Evidence Resolver','AUDIT','controls',gov,'DOKU / Context Foundation');
+service('AU-REPORT','Audit Evidence Packager','AUDIT','auditreport',doc,'DOKU / Context Foundation',['AU-CHECK']);
+const all=[...build.specs.map(s=>({...s,group:'BUILD'})),...extras];
+const spec=Object.fromEntries(all.map(s=>[s.id,s]));
+// The orchestrator routes only to capabilities. Each capability owns its service selection.
+const intents={DISCOVER:[discover,quality,doc],BUILD:[discover,quality,'Prioritization',doc,gov,obs],CONSUME:[discover,gov,obs,doc],IMPROVE:[obs,quality],AUDIT:[gov,doc]};
+const plans={DISCOVER:['inventory','coverage','reuse'],BUILD:build.pages.map(p=>p.id),CONSUME:['scope','query','report'],IMPROVE:['signal','diagnosis','improvement'],AUDIT:['controls','auditreport']};
+function chooseServices(group){
+ const byAgent=intents[group].map(capability=>({capability,services:all.filter(s=>s.group===group&&s.cap===capability).map(s=>s.id)}));
+ const membership=new Set(byAgent.flatMap(a=>a.services));
+ const services=all.filter(s=>membership.has(s.id)).map(s=>s.id);
+ return {capabilities:[...intents[group]],byAgent,services,steps:plans[group].filter(page=>services.some(id=>spec[id].page===page))};
+}
+function newSession(db){
+ const session={id:'S-2026-'+pad(++db.sessionSeq),cases:[],current:null};
+ db.sessions.push(session);db.activeSession=session.id;return session;
+}
+function fresh(){
+ const db={schema:4,sessionSeq:47,caseSeq:141,sequence:0,revision:0,sessions:[],facts:clone(catalog),activeSession:null};
+ newSession(db);return db;
+}
+const activeSession=db=>db.sessions.find(s=>s.id===db.activeSession);
+const activeCase=db=>{const s=activeSession(db);return s.cases.find(c=>c.id===s.current)};
+const activeGroup=db=>{const c=activeCase(db);return c?.groups.find(g=>g.id===c.active)};
+function allGroups(db){return db.sessions.flatMap(s=>s.cases.flatMap(c=>c.groups))}
+function allRuns(db){return allGroups(db).flatMap(g=>g.runs)}
+const done=(g,id)=>g.runs.some(r=>r.serviceId===id);
+const output=(g,id)=>g.runs.find(r=>r.serviceId===id)?.output;
+const selected=(g,page)=>g.plan.services.map(id=>spec[id]).filter(s=>s.page===page);
+const ready=(g,page)=>selected(g,page).every(s=>done(g,s.id));
+const finished=g=>g.plan.steps.every(page=>ready(g,page));
+function unlocked(g,page){const i=g.plan.steps.indexOf(page);return i>=0&&g.plan.steps.slice(0,i).every(p=>ready(g,p))}
+function fold(t){return String(t).toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replaceAll('ı','i').replaceAll('’',"'");}
+function classify(text,current){
+ const t=fold(text);
+ if(!t.trim())return {error:'Talebinizi yazın.'};
+ if(/\b(ik|hr|fiber|bordro|maas|ise alim|genis bant)\b/.test(t))return {error:'Bu demo Roaming kataloğunu içeriyor. Roaming için bir talep yazın veya örneklerden birini seçin.'};
+ let group;
+ if(/denetl|denetim|audit|kanit|onay izi/.test(t)) group='AUDIT';
+ else if(/iyilestir|improve|gecikme|anomali|kok neden|yavas|optimi/.test(t))group='IMPROVE';
+ else if(/(?:var mi|mevcut mu|kesfet|bulabilir|uygun kaynak|ara\b|discover|katalog|hangi kaynak)/.test(t))group='DISCOVER';
+ else if(/rapor|goster|sirala|sorgula|karsilastir|consume|en fazla|en yuksek/.test(t))group='CONSUME';
+ else if(/gelistir|insa|olustur|build|urun.+uret|kaynag.+ekle|veri urunu hazirla/.test(t))group='BUILD';
+ if(!group)return {error:'İstenen çıktıyı netleştirelim. Ürün araması, yeni veri ürünü, rapor, iyileştirme veya denetim seçeneklerinden birini belirtebilirsin.'};
+ const independent=/\b(ayri|bagimsiz|yeni talep|baska bir talep)\b/.test(t)||/pazarlama.*aylik|aylik.*pazarlama/.test(t);
+ const linked=/\b(bu|ayni|mevcut urun|devam|bu urunu|bunun)\b/.test(t);
+ const relation=!current||independent?'new':linked?'same':'clarify';
+ const monthlyCase=/aylik|ay baz/.test(t);
+ return {group,relation,monthly:monthlyCase,reason:!current?'Oturumun ilk talebi':independent?'Yeni iş çıktısı ve kullanım amacı':linked?'Mevcut talep veya veri ürününe açık referans':'Talep ile mevcut iş çıktısı arasındaki ilişki belirsiz'};
+}
+function latest(db,kind,predicate=()=>true){return [...db.facts].reverse().find(f=>f.kind===kind&&predicate(f))}
+function newGroup(db,current,text,hint){
+ const session=activeSession(db);
+ const group=hint.group;
+ let target=current;
+ if(!target||hint.relation==='new'){
+  target={id:'LC-2026-'+pad(++db.caseSeq),title:hint.monthly?'Aylık roaming yönetim raporu':group==='BUILD'||group==='DISCOVER'?'Roaming kullanım ve net gelir':groups[group].label+' · Roaming',groups:[],active:null};
+  session.cases.push(target);session.current=target.id;
+ }
+ const previous=target.groups.find(g=>g.id===target.active);
+ if(previous?.group===group&&fold(previous.request)===fold(text)){
+  return previous;
+ }
+ if(previous?.group===group&&!finished(previous)){
+  previous.notes.push({at:now(),text});return previous;
+ }
+ const relatedBuild=[...target.groups].reverse().find(g=>g.group==='BUILD');
+ if((group==='CONSUME'||group==='IMPROVE')&&relatedBuild&&!done(relatedBuild,'PL-DEPLOY')){
+  throw Error('Bu talebin veri ürünü henüz yayına alınmadı. Build akışındaki Release & Deploy adımını tamamlayınca ürün kullanılabilir.');
+ }
+ const deployed=latest(db,'product',f=>!f.seed);
+ const anchor=group==='BUILD'?target.id:(relatedBuild?target.id:deployed?.lifecycle||null);
+ const g={id:target.id+'/G'+(target.groups.length+1),lifecycle:target.id,session:session.id,group,request:text,monthly:hint.monthly||/aylık/i.test(target.title),anchor,
+  target:group==='BUILD'||anchor?'combined':'base',plan:chooseServices(group),page:null,context:{request:text,domain:'Roaming',
+  candidateAssets:['Network TAP3 feed','BILLING.FCT_ROAM_CHARGE_D'],classification:'Confidential · toplu tüketim',policy:'POL-PRV-021 v2',guardrail:'GR-BRONZE-01'},
+  runs:[],decisions:[],inputs:[],messages:{},route:[],notes:[],reason:hint.reason,created:now(),closed:null,revisionAtStart:db.revision};
+ target.groups.push(g);target.active=g.id;session.current=target.id;
+ enter(db,g,g.plan.steps[0]);return g;
+}
+function start(db,text,relation){
+ const c=activeCase(db),h=classify(text,c);
+ if(h.error)throw Error(h.error);
+ if(h.relation==='clarify'&&!relation)return {clarify:true,group:h.group};
+ if(relation)h.relation=relation;
+ return newGroup(db,c,text,h);
+}
+function selectGroup(db,id){
+ for(const s of db.sessions)for(const c of s.cases){const g=c.groups.find(x=>x.id===id);if(g){db.activeSession=s.id;s.current=c.id;c.active=g.id;return g}}
+}
+function matches(f,g){
+ if(f.segment===g.id)return true;
+ if(f.scope==='common')return true;
+ if(f.scope==='base')return g.target==='base'||g.group==='DISCOVER'||g.group==='BUILD';
+ return f.scope==='combined'&&(f.assetOwner||f.lifecycle)===(g.anchor||g.lifecycle);
+}
+function pick(db,g,kinds){return kinds.map(kind=>latest(db,kind,f=>matches(f,g))).filter(Boolean)}
+const readKeys={
+ 'DS-CAT':['asset','feed','billing','product','metric'],'DS-GAP':['metric','policy'],'DS-REUSE':['coverage'],
+ 'AS-01':['reuse'],'AS-02':['asset','feed','billing'],'AS-06':['policy'],'AS-14':['feed','billing','reuse'],'AS-15':['guardrail'],'AS-10':['metric'],'PL-PERF':['feed'],
+ 'CO-CONTRACT':['product','asset','metric','policy','quality','tests'],'CO-ACCESS':['policy'],'CO-QUERY':['product','asset','contract','quality','consent'],'CO-REPORT':['queryResult'],
+ 'IM-SIGNAL':['quality','operations','product'],'IM-CAUSE':['signal','design','perf','tests'],'IM-ACTION':['rootCause','policy'],
+ 'AU-CHECK':['architecture','tests','publication','catalog','dq','product','quality','policy'],'AU-REPORT':['auditControls']
+};
+const publication={
+ 'DS-CAT':['inventory','Katalog eşleşmeleri'],'DS-GAP':['coverage','Kapsam kararı'],'DS-REUSE':['reuse','Yeniden kullanım kararı'],
+ 'PL-MATURE':['demand','Onaylı talep bilgileri'],'AS-09':['brd','Taslak BRD'],'PL-JIRA':['jira','Jira kaydı'],'AS-07':['compliance','Compliance kararı'],
+ 'AS-10':['criteria','Kabul kriterleri'],'AS-14':['design','Teknik tasarım'],'PL-ARCH':['architecture','Bronze mimari onayı'],
+ 'PL-CODE':['etl','ETL ve pipeline'],'PL-PERF':['perf','Prod performans önerisi'],'AS-24':['tests','Test kanıtı'],
+ 'PL-GOVAPP':['publication','Governance yayın izni'],'PL-META':['catalog','MetadataHub kaydı'],'PL-DQ':['dq','SmartDQ kural seti'],
+ 'PL-PLAN':['release','Release manifest'],'PL-DEPLOY':['product','Yayındaki veri ürünü'],'PL-PROFILE':['quality','Prod kalite profili'],
+ 'PL-LIVEPERF':['benchmark','Prod performans karşılaştırması'],'PL-INCIDENT':['operations','Operasyon sinyali'],
+ 'CO-CONTRACT':['contract','Tüketim sözleşmesi'],'CO-ACCESS':['consent','Bu talebe ait tüketim amacı'],'CO-QUERY':['queryResult','Toplu sorgu sonucu'],'CO-REPORT':['report','Tüketim raporu'],
+ 'IM-SIGNAL':['signal','İncelenen sapma'],'IM-CAUSE':['rootCause','Kök neden'],'IM-ACTION':['learning','İyileştirme kararı'],
+ 'AU-CHECK':['auditControls','Kontrol eşleşmeleri'],'AU-REPORT':['auditPack','Denetim paketi']
+};
+const periodDays=['13 Kas','14 Kas','15 Kas','16 Kas','17 Kas','18 Kas','19 Kas'];
+const telemetry={days:periodDays,completeness:[99.8,99.7,99.9,99.8,98.6,99.7,99.8],minutes:[24,24,23,24,22,18,18],sla:'08:00',ready:'07:42',late:'07:15'};
+const approvalControls=[['Yeni Network / Bronze mimari kararı','architecture'],['Test ve kabul kriteri kapsamı','tests'],['Governance yayın izni','publication'],['MetadataHub kaydı','catalog'],['SmartDQ kayıtlı kuralları','dq'],['Veri ürününün yayını','product'],['Üretim kalite profili','quality']];
+function result(db,g,x,facts){
+ const c=g.context, latestRun=id=>output(g,id);
+ const built=g.target==='combined', product=built?'DP-RMG-017':'DP-RMG-004';
+ const fact=k=>facts.find(f=>f.kind===k);
+ switch(x.id){
+ case 'DS-CAT':return {assets:fact('product')?['DP-RMG-017','DP-RMG-004','BILLING.FCT_ROAM_CHARGE_D']:['DP-RMG-004','BILLING.FCT_ROAM_CHARGE_D','Network TAP3 (aday)'],summary:fact('product')?'Yayına alınmış birleşik ürün katalogda bulundu.':'Mevcut kullanım ürünü ve Billing tablosu bulundu. Network TAP3 yeni kaynak adayı.'};
+ case 'DS-GAP':{const has=latestRun('DS-CAT').assets.includes('DP-RMG-017');return {dimensions:[['Ülke / gün','Mevcut'],['Roaming kullanımı (GB)','Mevcut'],['Aynı üründe net gelir (TRY)',has?'Mevcut':'Eksik']],covered:has?3:2,total:3,summary:has?'3/3 gereksinim karşılandı.':'3 gereksinimin 2’si karşılanıyor.'}}
+ case 'DS-REUSE':{const full=latestRun('DS-GAP').covered===3;return {recommendation:full?'CONSUME':'BUILD',summary:full?'DP-RMG-017 doğrudan kullanılabilir.':'Gelir tanımını ve Billing tablosunu kullan. TAP3 beslemesini ekleyerek birleşik ürün geliştir.'}}
+ case 'AS-03':return {missing:['owner','purpose','sla'].filter(k=>!c[k]),summary:'Olgun talep için iş sahibi, iş amacı ve SLA kontrol edildi.'};
+ case 'PL-MATURE':return {owner:c.owner,purpose:c.purpose,sla:c.sla,summary:'Talep sahibi amaç, sahiplik ve SLA bilgisini onayladı.'};
+ case 'AS-15':return {...x.output,rule:c.guardrail};
+ case 'AS-09':return {...x.output,summary:c.purpose,owner:c.owner,sla:c.sla};
+ case 'AS-10':return {...x.output,businessRules:c.businessRules,successMetrics:c.successMetrics};
+ case 'AS-12':return {...x.output,stakeholders:c.stakeholders};
+ case 'PL-CODE':return {...x.output,language:c.language};
+ case 'PL-MONITOR':return {...x.output,series:clone(telemetry)};
+ case 'CO-CONTRACT':return {product,grain:'Ülke / gün',metrics:built?['Kullanım GB','Net gelir TRY']:['Kullanım GB'],policy:'POL-PRV-021 v2',summary:product+' için izinli metrikler ve toplulaştırma düzeyi getirildi.'};
+ case 'CO-ACCESS':return {purpose:c.consumerPurpose,policy:'POL-PRV-021 v2',scope:'Toplu ülke/gün · ekip içi',summary:'Bu tüketim talebinin amacı onaylandı.'};
+ case 'CO-QUERY':{
+  const rows=g.monthly?[['Almanya',83200,21632000],['Birleşik Krallık',69100,19348000],['Hollanda',50800,12700000],['Yunanistan',40600,9541000]]:[['Almanya',18420,4789200],['Birleşik Krallık',15760,4412800],['Hollanda',11280,2820000],['Yunanistan',8910,2093850]];
+  return {product,period:g.monthly?'Ekim 2026':'13–19 Kasım 2026',columns:built?['Ülke','Kullanım (GB)','Net gelir (TRY)']:['Ülke','Kullanım (GB)'],rows:built?rows:rows.map(r=>r.slice(0,2)),summary:'4 ülke kullanım hacmine göre sıralandı. Örnek veriler toplulaştırıldı.'};}
+ case 'CO-REPORT':return {product,report:'RPT-'+g.lifecycle.slice(-4)+'-'+g.id.split('/')[1],period:latestRun('CO-QUERY').period,summary:g.monthly?'Aylık yönetim raporu oluşturuldu.':'Haftalık ülke karşılaştırması hazır.'};
+ case 'IM-SIGNAL':return {product,day:'17 Kasım',observed:'07:15 Network partition eksik',ready:'07:42',summary:'Kaynak gecikmesi gözlendi; veri ürünü 08:00 hedefinden önce hazırdı.'};
+ case 'IM-CAUSE':return {product,cause:'Operatör TAP3 dosyası geç ulaştı.',source:'Partition geliş zamanları ve günlük toplu sinyaller',reuse:fact('design')?'Mevcut 3 günlük yeniden işleme kuralı bulundu.':'Önceki katalogdaki partition geliş kaydı kullanıldı.',summary:'Gecikme kaynaktan geliyor. Partition gelişini ayrı alarmla izle.'};
+ case 'IM-ACTION':return {product,owner:c.actionOwner,change:'Partition varış alarmını runbook aksiyonu olarak kaydet',status:'TAKİPTE',summary:'Sorumlu ve takip zamanı operasyon bilgisine eklendi.'};
+ case 'AU-CHECK':{
+  const checks=approvalControls.map(([name,k])=>{const f=fact(k);return {name,status:f?.ev?'Kanıt bulundu':'Kayıt bulunamadı',evidence:f?.ev||null}});
+  return {product,checks,matched:checks.filter(x=>x.evidence).length,total:checks.length,summary:checks.filter(x=>x.evidence).length+' / '+checks.length+' kontrolün çalıştırma kanıtı bulundu.'};}
+ case 'AU-REPORT':{const d=latestRun('AU-CHECK');return {product,checks:d.checks,matched:d.matched,total:d.total,summary:d.matched===d.total?'Denetim paketi tüm kontrol kanıtlarını içeriyor.':(d.total-d.matched)+' kontrol için kaynak kanıt eksik; takip listesine eklendi.'};}
+ default:return clone(x.output);
+ }
+}
+function summary(o){
+ if(o.summary)return o.summary;
+ if(o.criteria)return o.criteria.join(' · ');
+ if(o.product)return o.product+' · '+(o.version||o.environment||o.status||'');
+ if(o.etlArtifact)return o.etlArtifact+' · '+o.pipeline;
+ if(o.qualityPct)return 'Tamlık %'+o.qualityPct+' · hazır '+o.freshness;
+ if(o.beforeMin)return o.beforeMin+' dk → '+o.afterMin+' dk';
+ if(o.ruleSet)return o.ruleSet+' · '+o.rules+' kural';
+ if(o.catalogId)return o.catalogId+' · v'+o.version;
+ if(o.jiraKey)return o.jiraKey+' · '+o.status;
+ if(o.spec)return o.spec+' · '+o.bronze;
+ if(o.acCoverage)return o.artifact+' · '+o.acCoverage+' kabul kriteri';
+ if(o.proposal)return o.proposal;
+ if(o.incident)return o.incident+' · '+o.finding;
+ if(o.completePct!=null)return 'Tamlık %'+o.completePct+' · tekillik %'+o.uniquePct;
+ return String(o.artifact||o.release||o.decision||o.checked||o.status||o.passStatus||o.reason||Object.values(o)[0]||'Tamamlandı');
+}
+function localId(g,data){
+ if(g.group!=='BUILD')return data;
+ const n=String(Number(g.lifecycle.split('-').at(-1)));
+ return JSON.parse(JSON.stringify(data).replace(/(DOKU-|BRD-RMG-|SPEC-RMG-|TESTSET-|QA-EVIDENCE-|DOC-RMG-|BUILD-|DEP-|MON-|TEST-|RN-RMG-|etl-roaming-demo-v)142\b/g,'$1'+n));
+}
+function record(db,g,x){
+ const reuse=pick(db,g,readKeys[x.id]||[]).filter(f=>!['contract','consent','queryResult','signal','rootCause','auditControls','coverage'].includes(f.kind)||f.segment===g.id);
+ const dependencies=deps(g,x).map(id=>g.runs.find(r=>r.serviceId===id));
+ let input=x.group==='BUILD'?build.contractInput(g,x.id):null;
+ if(!input)input=Object.fromEntries([...x.fields.map(k=>[k,g.context[k]]),...dependencies.map(r=>[r.serviceId,r.evidenceId])]);
+ const out=localId(g,result(db,g,x,reuse));
+ const seq=++db.sequence;
+ const r={executionId:'EX-'+pad(seq),evidenceId:'EV-'+pad(seq),traceId:g.lifecycle+'/TR-'+pad(seq),at:now(),status:'COMPLETED',durationMs:80+(seq*37)%580,
+  session:g.session,lifecycle:g.lifecycle,segment:g.id,group:g.group,page:x.page,serviceId:x.id,name:x.name,capability:x.cap,runtime:x.runtime,
+  input:clone(input),output:out,read:reuse.map(f=>f.id),parentEvidence:[...new Set([...dependencies.map(r=>r.evidenceId),...reuse.map(f=>f.ev).filter(Boolean)])],
+  decision:g.decisions.findLast(d=>d.serviceId===x.id&&d.decision==='APPROVED')?.id||null,contextVersion:++db.revision};
+ g.runs.push(r);
+ const c=g.context;
+ switch(x.id){
+ case 'AS-09':c.brd=out.artifact;break;case 'PL-JIRA':c.jira=out.jiraKey;break;case 'AS-10':c.acceptanceCriteria=out.criteria;break;
+ case 'AS-14':Object.assign(c,{technicalSpec:out.spec,bronzeTarget:out.bronze,goldTarget:out.gold});break;case 'PL-ARCH':c.architectureApproval=r.evidenceId;break;
+ case 'PL-CODE':Object.assign(c,{etlArtifact:out.etlArtifact,pipeline:out.pipeline,commit:out.commit});break;
+ case 'PL-GOVAPP':c.governancePublicationApproval=r.evidenceId;break;case 'PL-META':c.metadatahub=out.catalogId;break;case 'PL-DQ':c.smartdq=out.ruleSet;break;
+ case 'PL-PLAN':c.release=out.release;break;case 'PL-DEPLOY':c.product=out.product;c.environment='PROD';break;
+ }
+ if(publication[x.id]){
+  const [kind,title]=publication[x.id];
+  db.facts.push({id:'CTX-'+pad(r.contextVersion),kind,title,value:summary(out),source:x.cap+' Agent',scope:g.group==='DISCOVER'?'common':g.target,
+   lifecycle:g.lifecycle,segment:g.id,page:g.page,ev:r.evidenceId,rev:r.contextVersion,seed:false,assetOwner:g.anchor||g.lifecycle});
+ }
+ return r;
+}
+function deps(g,x){return g.legacy&&x.id==='AS-04'&&!g.plan.services.includes('PL-MATURE')?['AS-03']:x.deps}
+function eligible(g,x){return g.plan.services.includes(x.id)&&g.page===x.page&&unlocked(g,x.page)&&deps(g,x).every(id=>done(g,id))&&x.fields.every(k=>String(g.context[k]||'').trim())}
+function sync(db,g){
+ for(const x of selected(g,g.page))if(!done(g,x.id)&&!x.approval&&eligible(g,x))record(db,g,x);
+ if(!g.closed&&finished(g))g.closed=now();
+}
+function enter(db,g,page){
+ if(!unlocked(g,page))return false;
+ g.page=page;
+ if(!g.route.some(r=>r.page===page))g.route.push({page,at:now(),intent:g.group,capabilities:g.plan.byAgent.map(a=>({capability:a.capability,selectedServices:a.services.filter(id=>spec[id].page===page)})).filter(a=>a.selectedServices.length)});
+ sync(db,g);return true;
+}
+function pending(g){
+ return selected(g,g.page).find(x=>!done(g,x.id)&&x.approval&&deps(g,x).every(id=>done(g,id)))||null;
+}
+function input(g,id,key,value){
+ const x=pending(g);
+ if(x?.id!==id||!x.fields.includes(key)||!String(value).trim())throw Error('Bu servis için beklenen bilgiyi girin.');
+ g.context[key]=String(value).trim();g.inputs.push({page:g.page,serviceId:id,field:key,value:g.context[key],at:now()});
+}
+function decide(db,g,id,actor,accept){
+ const x=spec[id];
+ if(!x||!x.approval||done(g,id)||actor!==x.approval||!eligible(g,x))throw Error('Servisin zorunlu girdileri ve ilgili rolün onayı gerekiyor.');
+ const d={id:'DEC-'+pad(++db.sequence),at:now(),page:g.page,serviceId:id,actor,decision:accept?'APPROVED':'RETURNED'};
+ g.decisions.push(d);
+ if(accept){record(db,g,x);sync(db,g)}
+ return d;
+}
+function factsOnPage(db,g,page){
+ const position=g.plan.steps.indexOf(page),runs=g.runs.filter(r=>g.plan.steps.indexOf(r.page)<=position);
+ const read=new Set(runs.flatMap(r=>r.read||[]));
+ return db.facts.filter(f=>read.has(f.id)||(f.segment===g.id&&g.plan.steps.indexOf(f.page)<=position));
+}
+function reuseOnGroup(db,g){
+ const read=new Set(g.runs.flatMap(r=>r.read||[]));
+ return db.facts.filter(f=>read.has(f.id)&&!f.seed&&f.segment!==g.id);
+}
+function nextText(db,group){
+ const current=activeCase(db);
+ if(!current)return groups[group].sample;
+ if(group==='BUILD')return 'Bu talep için eksik Network TAP3 kaynağını ekleyip ülke/gün bazında roaming kullanım ve net gelir veri ürününü geliştir.';
+ if(group==='DISCOVER')return 'Bu talep için uygun roaming kaynakları katalogda var mı?';
+ return groups[group].sample;
+}
+function runExample(db){
+ newSession(db);
+ const walkthrough=[];
+ function visit(text){
+  const g=start(db,text);
+  if(g.clarify)throw Error('Örnek talep açık bir bağlantı belirtmeli.');
+  g.mode='guided';
+  for(const page of g.plan.steps){
+   if(!enter(db,g,page))throw Error('Örnek oturum ilerleyemedi: '+page);
+   let waiting;
+   while((waiting=pending(g))){
+    for(const key of waiting.fields)if(!g.context[key])input(g,waiting.id,key,fields[key].sample);
+    decide(db,g,waiting.id,waiting.approval,true);
+   }
+  }
+  walkthrough.push(g);return g;
+ }
+ for(const kind of ['DISCOVER','BUILD','CONSUME','IMPROVE','AUDIT'])visit(nextText(db,kind));
+ visit(monthly);
+ selectGroup(db,walkthrough[1].id);
+ return walkthrough;
+}
+// Retain earlier manual executions and their original evidence identifiers on upgrade.
+function upgrade(old){
+ const db=fresh();
+ if(!old||old.schema!==3||!old.context?.request||!Array.isArray(old.runs)||!old.runs.length)return db;
+ const s=activeSession(db);s.id=old.session||s.id;db.activeSession=s.id;
+ const id=old.lifecycle||'LC-2026-0142';
+ const g={id:id+'/G1',lifecycle:id,session:s.id,group:'BUILD',request:old.context.request,monthly:false,anchor:id,target:'combined',plan:chooseServices('BUILD'),
+ page:pages[old.page]?old.page:'demand',context:clone(old.context),runs:[],decisions:clone(old.decisions||[]),inputs:clone(old.inputs||[]),messages:{},route:[],notes:[],
+ reason:'Önceki demo oturumundan devam',created:old.runs[0].at,closed:null,revisionAtStart:0,legacy:true};
+ if(old.runs.some(r=>r.serviceId==='AS-04')){
+  g.plan.services=g.plan.services.filter(x=>x!=='PL-MATURE');
+  g.plan.byAgent.forEach(a=>a.services=a.services.filter(x=>x!=='PL-MATURE'));
+ }
+ s.cases.push({id,title:'Roaming kullanım ve net gelir',groups:[g],active:g.id});s.current=id;
+ db.sessionSeq=Math.max(db.sessionSeq,Number(s.id.split('-').at(-1))||0);
+ db.caseSeq=Math.max(db.caseSeq,Number(id.split('-').at(-1))||0);
+ db.sequence=old.seq||0;
+ for(const oldRun of old.runs){
+  const r={...oldRun,session:s.id,lifecycle:id,segment:g.id,group:'BUILD',read:[],decision:g.decisions.find(d=>d.serviceId===oldRun.serviceId&&d.decision==='APPROVED')?.id||null};
+  g.runs.push(r);db.revision=Math.max(db.revision,r.contextVersion||0);
+  if(publication[r.serviceId]){
+   const [kind,title]=publication[r.serviceId];db.facts.push({id:'CTX-'+pad(r.contextVersion),kind,title,value:summary(r.output),source:r.capability+' Agent',scope:'combined',lifecycle:id,assetOwner:id,segment:g.id,page:r.page,ev:r.evidenceId,rev:r.contextVersion,seed:false});
+  }
+ }
+ for(const page of [...new Set(old.runs.map(r=>r.page))])g.route.push({page,at:g.runs.find(r=>r.page===page).at,intent:'BUILD',capabilities:g.plan.byAgent.map(a=>({capability:a.capability,selectedServices:a.services.filter(id=>spec[id].page===page)})).filter(a=>a.selectedServices.length)});
+ if(finished(g))g.closed=g.runs.at(-1).at;
+ return db;
+}
+const API={nextText,runExample,upgrade,deps,roles,groups,pages,monthly,fields,spec,catalog,telemetry,chooseServices,fresh,newSession,activeSession,activeCase,activeGroup,allGroups,allRuns,done,output,ready,finished,unlocked,selected,eligible,classify,start,selectGroup,enter,pending,input,decide,factsOnPage,reuseOnGroup,summary};
+root.DokuEngine=API;if(typeof module!=='undefined')module.exports=API;
+})(typeof window!=='undefined'?window:globalThis);
+</script><script>(function(root){
+'use strict';
+const E=root.DokuEngine;
+const esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt=n=>new Intl.NumberFormat('tr-TR').format(n);
+const paths={home:'M3 11 12 3l9 8v10h-6v-7H9v7H3z',layers:'m3 7 9-4 9 4-9 4z M3 12l9 4 9-4 M3 17l9 4 9-4',search:'M15.5 15.5 21 21 M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0',chart:'M4 3v17h17 M8 16v-4 M13 16V7 M18 16v-6',trend:'M3 17l6-6 4 3 8-10 M15 4h6v6',shield:'M12 2 4 5v6c0 5 3 8 8 11 5-3 8-6 8-11V5z M8 12l3 3 5-6',folder:'M3 7V4h7l3 3h8v13H3z',db:'M3 6c0-5 18-5 18 0s-18 5-18 0 M3 6v12c0 5 18 5 18 0V6 M3 12c0 5 18 5 18 0',trace:'M5 4v14h13 M5 9h12 M17 7l3 2-3 2 M17 16l3 2-3 2',plus:'M12 4v16 M4 12h16',play:'m8 4 12 8-12 8z',check:'m4 12 5 5L20 6',lock:'M6 11h12v10H6z M8 11V8c0-7 8-7 8 0v3',menu:'M3 6h18 M3 12h18 M3 18h18',list:'M4 6h2 M9 6h12 M4 12h2 M9 12h12 M4 18h2 M9 18h12',download:'M12 3v12 M7 10l5 5 5-5 M4 16v5h16v-5',clock:'M22 12A10 10 0 1 1 2 12a10 10 0 0 1 20 0 M12 6v6l4 2',chat:'M3 3h18v13H9l-6 5z',eye:'M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12 M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0',history:'M4 8a9 9 0 1 1 0 8 M4 3v5h5 M12 6v6l4 2',file:'M5 2h9l5 5v15H5z M14 2v6h5 M8 13h8 M8 17h6',user:'M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0 M3 21c0-8 18-8 18 0',flow:'M2 4h5v5H2z M17 2h5v5h-5z M17 16h5v5h-5z M7 6h5v12h5 M12 5h5',close:'M5 5l14 14 M19 5 5 19',activity:'M2 13h5l3-8 4 15 3-8h5',arrow:'m8 5 7 7-7 7'};
+function icon(name,size=18){return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="${paths[name]||paths.layers}"/></svg>`}
+function pill(label,tone='neutral'){return `<span class="pill ${tone}">${esc(label)}</span>`}
+function panel(title,inside,after='',cls=''){return `<section class="panel ${cls}"><div class="panel-h"><h2>${esc(title)}</h2>${after}</div><div class="panel-b">${inside}</div></section>`}
+function kv(items){return `<dl class="kv">${Object.entries(items).filter(([,v])=>v!==undefined&&v!==null).map(([k,v])=>`<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>`}
+function table(head,rows){return `<div class="tablebox"><table><thead><tr>${head.map(x=>`<th>${esc(x)}</th>`).join('')}</tr></thead><tbody>${rows.map(row=>`<tr>${row.map(v=>`<td>${esc(v)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}
+function button(action,label,style='',attrs=''){return `<button type="button" class="btn ${style}" data-a="${action}" ${attrs}>${label}</button>`}
+function metrics(items){return `<section class="kpi-grid" aria-label="Adım göstergeleri">${items.map(([k,v,n])=>`<article class="kpi"><span>${esc(k)}</span><strong>${esc(v)}</strong><small>${esc(n)}</small></article>`).join('')}</section>`}
+function groupMark(g){return `<span class="mark ${E.groups[g].color}">${icon(E.groups[g].icon,21)}</span>`}
+function evidenceLink(id){return id?`<button type="button" class="text-link mono" data-ev="${esc(id)}">${esc(id)}</button>`:'<span class="muted">—</span>'}
+function blank(text){return `<div class="empty">${esc(text)}</div>`}
+const descriptors={
+ demand:'İş ihtiyacını, sahibini ve günlük teslim beklentisini tek talepte topla.',
+ intake:'BRD taslağını incele. Jira kaydını talep sahibinin onayıyla oluştur.',
+ compliance:'Kullanım koşullarını ve geliştirme sonunda Governance’a taşınacak bilgileri belirle.',
+ business:'İş kurallarını ve paydaşları tamamla. Kabul kriterlerini BRD ile ilişkilendir.',
+ design:'Kaynak, hedef ve yükleme kararlarını incele. Yeni Bronze yazımı mimari onay gerektirir.',
+ development:'ETL çıktısını üret. Prod performans önerisini kontrollü model ucundan al.',
+ test:'İş kurallarını, veri kalitesini ve SLA hedefini aynı test koşusunda doğrula.',
+ governance:'Geliştirme ve test sırasında toplanan metadata ve kalite kurallarını yayın onayına sun.',
+ release:'Hazırlık, politika ve risk sonuçlarını inceleyip veri ürününü yayına al.',
+ live:'Roaming ürününün kalitesini, hazır olma zamanını ve işleme süresini izle.',
+ inventory:'Katalogdaki ürünleri ve kaynakları talepteki metriklerle eşleştir.',
+ coverage:'Kullanım, gelir ve veri düzeyi için mevcut kapsamı kontrol et.',
+ reuse:'Keşifte bulunan varlıklarla hangi işin yeniden kullanılacağını kaydet.',
+ scope:'Ürün sözleşmesini yükle ve bu tüketicinin kullanım amacını doğrula.',
+ query:'Yetkili toplu sorgunun sonucunu ülke bazında karşılaştır.',
+ report:'Kullanılan ürün, metrik ve kaynak iziyle raporu teslim et.',
+ signal:'Tazelik sapmasını ürünün çalışma geçmişiyle birlikte getir.',
+ diagnosis:'Geç gelen Network verisini önceki tasarım ve telemetriyle karşılaştır.',
+ improvement:'Runbook aksiyonunu sorumlu ve takip tarihiyle operasyon geçmişine işle.',
+ controls:'Seçili ürünün kontrollerini kayda alınmış yürütme kanıtlarıyla eşleştir.',
+ auditreport:'Bulunan kanıtları ve açık kontrolleri aynı denetim paketinde incele.'
+};
+function pageMetrics(db,g){
+ const p=g.page,c=g.context,o=id=>E.output(g,id),runs=g.runs.filter(r=>r.page===p),audit=o('AU-CHECK');
+ const data={
+ demand:[['Zorunlu bilgiler',[c.owner,c.purpose,c.sla].filter(Boolean).length+' / 3','İş sahibi · amaç · SLA'],['Veri alanı','Roaming','Network ve Billing'],['Kaynak adayı','2','TAP3 ve mevcut ücret tablosu']],
+ intake:[['BRD',c.brd?'Taslak hazır':'Bekliyor','BRD Generator'],['Jira',c.jira||'Onay bekliyor','Talep sahibi / PO'],['Talep bilgileri',o('PL-MATURE')?'Onaylı':'Eksik','Demand kaydı']],
+ compliance:[['Veri sınıfı','Confidential','Ülke / gün düzeyi'],['Politika kararı',o('AS-07')?'Onaylı':'Koşullu','POL-PRV-021 v2'],['Katalog yayını','Sonraki adım','Geliştirme ve test sonrası']],
+ business:[['Girdi kaynağı',c.brd?'BRD hazır':'Bekliyor','AS-09'],['Kabul kriteri',o('AS-10')?.criteria.length??'—','AS-10 sonucu'],['İş etkisi',o('AS-12')?'Hazır':'Bekliyor','Paydaş ve KPI analizi']],
+ design:[['Yeni kaynak','Network TAP3','Ham 1:1 veri alımı'],['Hedef katman','Bronze','Ozone / Iceberg'],['Mimari karar',o('PL-ARCH')?'Onaylı':o('AS-15')?'Onay bekliyor':'İncelenecek','Data Architect']],
+ development:[['ETL çıktısı',o('PL-CODE')?'Üretildi':'Bekliyor','Onaylı tasarımdan'],['Kod kontrolü',o('AS-18')?.review||'—','TARS / SDLC'],['Prod analiz',o('PL-PERF')?'Öneri hazır':'Bekliyor','DOKU model ucu']],
+ test:[['Başarılı test',o('PL-TEST')?.passed??'—','QA yürütme sonucu'],['Başarısız test',o('PL-TEST')?.failed??'—','QA yürütme sonucu'],['Kriter kapsamı',o('AS-24')?.acCoverage||'—','Test Evidence Summarizer']],
+ governance:[['Yayın izni',o('PL-GOVAPP')?'Onaylandı':'Bekliyor','Governance ekibi'],['MetadataHub',o('PL-META')?'Kayıtlı':'Bekliyor','Sahiplik ve lineage'],['SmartDQ',o('PL-DQ')?'3 kural':'Bekliyor','Tamlık · tekillik · SLA']],
+ release:[['Hazırlık',o('AS-26')?.decision||'—','Test ve onay kontrolü'],['Risk',o('AS-28')?.risk||'—','Release Risk Scorer'],['Yayın',o('PL-DEPLOY')?'Başarılı':'Bekliyor','CI/CD adapter']],
+ inventory:[['Eşleşen varlık',o('DS-CAT')?.assets.length??'—','Ürün ve kaynak kataloğu'],['Veri düzeyi','Ülke / gün','Roaming Commercial'],['Kapsam','2 metrik','GB ve net gelir']],
+ coverage:[['Karşılanan',o('DS-GAP')?.covered+' / 3','Kapsam analizi'],['Mevcut ürün','DP-RMG-004','Günlük kullanım'],['İstenen para birimi','TRY','Net gelir tanımı']],
+ reuse:[['Sonraki grup',o('DS-REUSE')?.recommendation||'—','Kapsam kararından'],['Katalog sürümü','v12','Teknik envanter'],['Karar kaydı',runs.length?'Oluştu':'Bekliyor','Context Foundation']],
+ scope:[['Veri ürünü',o('CO-CONTRACT')?.product||'—','Seçilen sözleşme'],['Metrik sayısı',o('CO-CONTRACT')?.metrics.length??'—','Ürün kapsamı'],['Tüketim amacı',o('CO-ACCESS')?'Onaylı':'Bekliyor','Bu talebe özgü']],
+ query:[['Dönem',g.monthly?'Ekim 2026':'13–19 Kasım','Sentetik kullanım'],['Ülke',o('CO-QUERY')?.rows.length??'—','Toplu çıktı'],['Sorgu ortamı','PROD','Yetkili adapter']],
+ report:[['Rapor',g.monthly?'Aylık':'Haftalık','Tüketim periyodu'],['Ürün',o('CO-REPORT')?.product||'—','Kaynak sözleşmesi'],['Devralınan bilgi',E.reuseOnGroup(db,g).length,'Önceki gruplardan']],
+ signal:[['Olay günü','17 Kasım','Sentetik gözlem'],['İlk sinyal','07:15','Partition eksik'],['Hazır olma','07:42','Hedef 08:00']],
+ diagnosis:[['Kaynak','Network','Operatör TAP3'],['İşlem','Salt okuma','Prod model ucu'],['Bulgular',o('IM-CAUSE')?'Hazır':'—','Tasarım ve telemetri']],
+ improvement:[['Aksiyon','Runbook','Partition geliş alarmı'],['Sorumlu',o('IM-ACTION')?'Atandı':'Bekliyor','Data Operations'],['Durum',o('IM-ACTION')?'Takipte':'Onay bekliyor','İyileştirme kaydı']],
+ controls:[['Kontrol',audit?.total??'—','Ürün yaşam döngüsü'],['Kanıt bulundu',audit?.matched??'—','Kaynak yürütmeye bağlı'],['Açık kontrol',audit?audit.total-audit.matched:'—','Kayıt bekleniyor']],
+ auditreport:[['Kanıt kapsamı',audit?audit.matched+' / '+audit.total:'—','Bu ürünün kayıtları'],['Paket',o('AU-REPORT')?'Hazır':'Bekliyor','Denetim özeti'],['Denetim akışı',g.plan.steps.length+' adım','Kanıt taraması ve özet']]
+ };
+ return metrics(data[p]||[]);
+}
+function notice(title,body,tone=''){return `<div class="notice ${tone}"><strong>${esc(title)}</strong><p>${esc(body)}</p></div>`}
+function brd(g){const c=g.context;return `<div class="document"><span class="eyebrow">İŞ GEREKSİNİMLERİ</span><h3>Roaming kullanım ve net gelir</h3><small class="mono">${esc(c.brd||'Taslak bekleniyor')}</small>${kv({'İş amacı':c.purpose,'İş sahibi':c.owner,'Teslim hedefi':c.sla,'Veri düzeyi':'Ülke / olay günü','Kaynaklar':'Network TAP3 ve Billing net ücretleri'})}</div>`}
+function auditTable(o){return `<div class="tablebox"><table><thead><tr><th>Kontrol</th><th>Durum</th><th>Kanıt</th></tr></thead><tbody>${o.checks.map(x=>`<tr><td>${esc(x.name)}</td><td>${pill(x.status,x.evidence?'mint':'gold')}</td><td>${evidenceLink(x.evidence)}</td></tr>`).join('')}</tbody></table></div>`}
+function contextContent(db,g){
+ const p=g.page,c=g.context,o=id=>E.output(g,id),success=key=>!!o(key);
+ switch(p){
+ case 'demand':return panel('Roaming talebi',`<blockquote>${esc(g.request)}</blockquote>${kv({'Sorumlu':c.owner||'Sohbette istenecek','İş amacı':c.purpose||'Sohbette istenecek','SLA':c.sla||'Sohbette istenecek'})}`);
+ case 'intake':return `<div class="split">${panel('Taslak BRD',brd(g))}${panel('Jira kaydı',c.jira?notice(c.jira,'Onaylı BRD ve Lifecycle ID bu kayda bağlandı.','ok'):`<p>Talep sahibi taslağı onayladığında Jira Demand Creator çalışır.</p>${button('to-chat','BRD onayını incele','primary')}`)} </div>`;
+ case 'compliance':return panel('Kullanım ve yayın koşulları',kv({'Kullanım':'Yalnızca ülke ve gün bazında toplu çıktı','Bronze erişimi':'Yetkilendirilmiş veri ekipleri','İlk onay':success('AS-07')?'Koşullar kabul edildi':'Governance kararı bekleniyor'})+notice('Geliştirme sonunda ayrı yayın izni','Owner, lineage, saklama süresi ve kalite kuralları testten sonra Governance ekibine sunulur. MetadataHub ve SmartDQ yazımları o karara bağlıdır.'));
+ case 'business':return panel('Girdi ve çıktı eşlemesi',table(['Servis','Context’ten','Sohbette'],[['AS-10 · Acceptance Criteria Generator','BRD','İş kuralları ve bu talebin başarı metrikleri'],['AS-11 · Requirement Quality Checker','BRD, kabul kriterleri, requirement ID’ler','Otomatik'],['AS-12 · Business Impact Extractor','BRD, KPI tanımları','Paydaş listesi']])+(o('AS-10')?`<h3>Üretilen kabul kriterleri</h3><ul class="ticks">${o('AS-10').criteria.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:''));
+ case 'design':return panel('Tasarım kararı',(o('AS-14')?kv({'Kaynak':o('AS-14').source,'Bronze hedefi':c.bronzeTarget,'Gold hedefi':c.goldTarget,'Yükleme':o('AS-14').ingestion,'Geç kayıt kuralı':o('AS-14').lateArrival}):blank('NFR girdisi onaylanınca teknik tasarım burada oluşur.'))+(o('AS-15')?notice(o('PL-ARCH')?'Data Architect onayı kaydedildi':'Geliştirme mimari onay bekliyor','GR-BRONZE-01 · Yeni Network verisinin Bronze katmanına yazımı.',o('PL-ARCH')?'ok':'warn'):''));
+ case 'development':{const t=o('PL-PERF');return panel('ETL ve performans', (c.etlArtifact?kv({'ETL':c.etlArtifact,'Pipeline':c.pipeline,'Sürüm referansı':c.commit,'Teknoloji':o('PL-CODE').language}):blank('ETL çıktısı, teknoloji girdisi ve Data Engineer onayıyla üretilir.'))+notice('Performance Tuning Advisor · DOKU model ucu',t?t.baselineRuntimeMin+' dk referans süre. '+t.proposal+'.':"Servis benzer bir üretim işinin sorgu planını ve toplu sürelerini yetkili, salt okunur erişimle analiz eder. Yeni ürünün ölçümü yayından sonra başlar.",t?'ok':''));}
+ case 'test':return panel('Test sonuçları',o('PL-TEST')?table(['Test grubu','Başarılı','Başarısız'],[['Şema ve veri sözleşmesi',3,0],['Kullanım ve gelir dönüşümleri',4,0],['Kalite kuralları',3,0],['SLA ve geç gelen kayıt',2,0]])+kv({'Test koşusu':o('PL-TEST').runId,'Kabul kriterleri':o('AS-24')?.acCoverage,'Tamlık':'%'+fmt(o('PL-TEST').completePct),'Kritik hata':o('AS-23')?.criticalDefects}):blank('QA test koşusunu onayladığında grup bazlı sonuçlar ve kanıtlar burada görünür.'));
+ case 'governance':return panel('Governance yayın paketi',kv({'MetadataHub':'İş tanımı, sahiplik, sınıflandırma, lineage, saklama süresi','SmartDQ':o('PL-GOVPACK')?.qualityRules.join(' · '),'Dayanak':'Teknik tasarım, ETL ve QA kanıtları','MetadataHub sonucu':c.metadatahub||'Onay bekleniyor','SmartDQ sonucu':c.smartdq||'Onay bekleniyor'}));
+ case 'release':return panel('Yayın sonuçları',o('PL-PLAN')?kv({'Release':c.release,'Yayın penceresi':c.releaseWindow,'Hazırlık':o('AS-26')?.decision,'Politika':o('AS-27')?.decision,'Risk':o('AS-28')?.risk,'Release notu':o('AS-29')?.artifact,'Deployment':o('PL-DEPLOY')?.deployment||'Release Manager onayını bekliyor','Sonuç':o('AS-30')?.status}):blank('Onaylı yayın penceresiyle manifest oluşturulduğunda servis sonuçları burada görünür.'));
+ case 'inventory':return panel('Bulunan varlıklar',table(['Varlık','Katalog kapsamı'],o('DS-CAT').assets.map(a=>[a,a.includes('004')?'Ülke / gün kullanım miktarı':a.includes('017')?'Birleşik kullanım ve net gelir':a.includes('BILLING')?'Faturalanmış net ücretler':'Yeni onboarding adayı'])));
+ case 'coverage':return panel('İhtiyaç karşılaştırması',table(['İş gereksinimi','Mevcut kapsam'],o('DS-GAP').dimensions));
+ case 'reuse':return panel('Keşif kararı',notice(o('DS-REUSE').recommendation==='BUILD'?'Yeni besleme gerekiyor':'Yayındaki ürün kullanılabilir',o('DS-REUSE').summary,'ok'));
+ case 'scope':return panel('Ürün sözleşmesi',kv({'Ürün':o('CO-CONTRACT').product,'Ölçüler':o('CO-CONTRACT').metrics.join(' · '),'Veri düzeyi':o('CO-CONTRACT').grain,'Politika':o('CO-CONTRACT').policy,'Kullanım amacı':o('CO-ACCESS')?.purpose||'Sohbette istenecek'}));
+ case 'query':case 'report':{const q=o('CO-QUERY');return panel(p==='report'?'Teslim edilen rapor':'Ülke bazında kullanım',`<div class="minihead">${pill(q.product,'blue')}<small>${esc(q.period)} · sentetik toplu veri</small></div>${table(q.columns,q.rows.map(row=>row.map(v=>typeof v==='number'?fmt(v):v)))}`+(o('CO-REPORT')?kv({'Rapor kodu':o('CO-REPORT').report,'Teslim':o('CO-REPORT').summary}):''));}
+ case 'signal':return panel('Olay zaman çizgisi',kv({'Etkilenen ürün':o('IM-SIGNAL').product,'Olay günü':o('IM-SIGNAL').day,'İlk sinyal':o('IM-SIGNAL').observed,'Ürün hazır':o('IM-SIGNAL').ready}));
+ case 'diagnosis':return panel('Kaynak analizi',kv({'Kök neden':o('IM-CAUSE').cause,'İncelenen veri':o('IM-CAUSE').source,'Yeniden kullanılan bilgi':o('IM-CAUSE').reuse,'Öneri':o('IM-CAUSE').summary}));
+ case 'improvement':return panel('Runbook aksiyonu',notice(o('IM-ACTION')?'Aksiyon kaydedildi':'Operasyon kararı bekliyor',o('IM-ACTION')?o('IM-ACTION').owner+' · '+o('IM-ACTION').change:'Geciken partition için varış alarmı önerildi. Sorumlu ve takip zamanını sohbette tamamla.',o('IM-ACTION')?'ok':'warn'));
+ case 'controls':case 'auditreport':return panel(p==='controls'?'Kontrol ve kaynak kanıt':'Denetim paketi',auditTable(o('AU-CHECK'))+(o('AU-REPORT')?notice('Denetim sonucu',o('AU-REPORT').summary):''));
+ default:return '';
+ }
+}
+function lineChart(values,labels,{target,color,unit,min,max}){
+ const w=560,h=200,l=45,t=22,b=32,r=22, bottom=h-b;
+ const scale=v=>bottom-(v-min)/(max-min)*(bottom-t);
+ const xs=values.map((_,i)=>l+i*(w-l-r)/(values.length-1));
+ const points=values.map((v,i)=>xs[i]+','+scale(v));
+ const levels=[min,(min+max)/2,max];
+ const goal=target===undefined?'':`<line x1="${l}" y1="${scale(target)}" x2="${w-r}" y2="${scale(target)}" stroke="#bd7641" stroke-dasharray="4 4"/>`;
+ return `<svg class="chart" viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(labels.map((d,i)=>d+' '+fmt(values[i])+unit).join(', '))}">${levels.map(v=>`<line x1="${l}" x2="${w-r}" y1="${scale(v)}" y2="${scale(v)}" stroke="#e5e9ee"/><text x="${l-7}" y="${scale(v)+4}" text-anchor="end">${fmt(v)}</text>`).join('')}${goal}<polygon points="${xs[0]},${bottom} ${points.join(' ')} ${xs.at(-1)},${bottom}" fill="${color}" opacity=".07"/><polyline points="${points.join(' ')}" fill="none" stroke="${color}" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>${values.map((v,i)=>`<circle cx="${xs[i]}" cy="${scale(v)}" r="4.5" fill="white" stroke="${color}" stroke-width="2.5"><title>${labels[i]} · ${fmt(v)} ${unit}</title></circle><text x="${xs[i]}" y="${h-9}" text-anchor="middle">${labels[i]}</text>`).join('')}</svg>`;
+}
+function dashboard(g){
+ const monitor=E.output(g,'PL-MONITOR'),profile=E.output(g,'PL-PROFILE'),perf=E.output(g,'PL-LIVEPERF'),incident=E.output(g,'PL-INCIDENT');if(!monitor)return blank('Telemetri henüz toplanmadı.');
+ const d=monitor.series||E.telemetry;
+ return `<div class="productband"><div><span class="eyebrow">ÜRÜN SÖZLEŞMESİ</span><h2>Roaming kullanım ve net gelir</h2><p>${esc(g.context.product)} · Gold / ülke-gün · ${esc(g.context.owner)}</p></div>${pill('PROD · demo','mint')}</div>${metrics([['Veri tamlığı','%'+fmt(profile.completePct),'SmartDQ hedefi ≥ %99,5'],['Hazır olma',d.ready,'SLA '+d.sla+' · 18 dk pay'],['Pipeline başarısı','%'+fmt(monitor.runSuccessPct),'7 günlük örnek telemetri'],['İşleme süresi',perf.afterMin+' dk','Referans '+perf.beforeMin+' dk · %'+perf.improvementPct+' azalma']])}<div class="split">${panel('Veri tamlığı',lineChart(d.completeness,d.days,{color:'#008577',target:99.5,unit:'%',min:98,max:100})+'<small class="legend"><i></i>Günlük tamlık <em></em>Hedef %99,5</small>')}${panel('Pipeline süresi',lineChart(d.minutes,d.days,{color:'#6a57b5',unit:'dk',min:16,max:26})+'<small class="legend">Eş hacimli örnek iş yükü · dakika</small>')}</div><div class="split">${panel('Operasyon olayı',`<div class="event"><time>07:15</time><span>Network TAP3 partition gecikti.</span></div><div class="event"><time>07:24</time><span>Incident Analyzer, tasarımdaki üç günlük yeniden işleme kuralını buldu.</span></div><div class="event"><time>07:42</time><span>Ürün SLA öncesinde hazır.</span></div>${evidenceLink(g.runs.find(r=>r.serviceId==='PL-INCIDENT')?.evidenceId)}`,pill(incident.incident,'gold'))}${panel('Veri ürünü sağlığı',kv({'İşlenen hacim':fmt(profile.rowCount)+' kayıt','Tekillik':'%'+fmt(profile.uniquePct),'Aktif tüketici':monitor.consumers+' ekip / uygulama','SmartDQ':g.context.smartdq,'MetadataHub':g.context.metadatahub}))}</div>`;
+}
+root.DokuView={esc,fmt,icon,pill,panel,kv,table,button,metrics,groupMark,evidenceLink,blank,notice,descriptors,pageMetrics,contextContent,dashboard};
+})(window);
+</script><script>(function(){
+'use strict';
+const E=window.DokuEngine,V=window.DokuView;
+const {esc,icon,pill,panel,kv,table,button,metrics,groupMark,evidenceLink,blank,notice}=V;
+const $=id=>document.getElementById(id);
+const storage='doku-workspace-v4',viewKey='doku-workspace-view-v4';
+let db,view='home',role='requester',mobileNav=false,storageOk=true,previewPage=null,draft='',toastTimer,clarification=null;
+try{
+ const saved=JSON.parse(localStorage.getItem(storage)),ui=JSON.parse(localStorage.getItem(viewKey)||'{}');
+ db=saved?.schema===4?saved:E.upgrade(JSON.parse(localStorage.getItem('doku-service-demo-v3')));
+ if(['home','work','context','history','evidence'].includes(ui.view))view=ui.view;
+ if(E.roles[ui.role])role=ui.role;
+}catch{db=E.fresh()}
+if(!E.activeGroup(db)&&view==='work')view='home';
+const session=()=>E.activeSession(db),active=()=>E.activeGroup(db),theCase=()=>E.activeCase(db);
+function store(){
+ try{localStorage.setItem(storage,JSON.stringify(db));localStorage.setItem(viewKey,JSON.stringify({view,role}))}catch{storageOk=false}
+}
+function toast(text){$('toast').textContent=text;$('toast').hidden=false;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').hidden=true,5000)}
+function modal(title,html){
+ $('modal-title').textContent=title;$('modal-body').innerHTML=html;
+ if(!$('dialog').open)$('dialog').showModal();
+}
+function close(){if($('dialog').open)$('dialog').close()}
+function go(name){view=name;previewPage=null;mobileNav=false;close();render();window.scrollTo(0,0)}
+function humanTime(date){return new Date(date).toLocaleTimeString('tr-TR',{hour:'2-digit',minute:'2-digit',second:'2-digit'})}
+function pageName(id){return E.pages[id]?.title||id}
+function navItem(id,name,ic){return `<button class="nav-item ${view===id?'chosen':''}" data-view="${id}" ${view===id?'aria-current="page"':''}>${icon(ic)}<span>${name}</span></button>`}
+function logo(){return '<span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><b>DOKU</b>'}
+function sidebar(){
+ const g=active(),s=session(),c=theCase();
+ return `<aside class="rail ${mobileNav?'open':''}" id="side-navigation"><button class="logo" data-view="home" aria-label="DOKU çalışma alanı">${logo()}</button><div class="rail-label">ÇALIŞMA ALANI</div><nav aria-label="Ana menü">${navItem('home','Genel bakış','home')}${navItem('history','Talep geçmişi','history')}${navItem('context','Context Foundation','db')}${navItem('evidence','Kanıt kayıtları','trace')}</nav>${g?`<div class="rail-label journey-label"><span>${E.groups[g.group].name.toLocaleUpperCase('tr-TR')} ADIMLARI</span><span>${g.plan.steps.length}</span></div><nav class="step-nav" aria-label="Talebe ait adımlar">${g.plan.steps.map((p,i)=>{
+ const chosen=view==='work'&&(previewPage||g.page)===p,done=E.ready(g,p),locked=!E.unlocked(g,p);
+ return `<button class="step ${chosen?'chosen':''} ${done?'complete':''}" data-page="${p}" aria-current="${chosen?'step':'false'}" title="${pageName(p)}"><i>${done?icon('check',12):locked?icon('lock',12):String(i+1).padStart(2,'0')}</i><span>${pageName(p)}</span></button>`;
+ }).join('')}</nav>`:''}<div class="rail-bottom"><div class="rail-session"><div class="rail-label">AKTİF OTURUM</div><div class="mono">${esc(s.id)}</div><small>${esc(c?.id||'İlk talep bekleniyor')}</small></div><button data-a="architecture">${icon('flow',16)} Mimari akış</button></div></aside>`;
+}
+function topbar(){
+ const s=session();return `<header class="topbar"><button class="mobile-menu icon-button" data-a="menu" aria-label="Menüyü aç veya kapat">${icon('menu')}</button><div class="topbrand"><span class="topdot"></span>DataOps Studio <span class="divider"></span><span class="sim">Demo ortamı</span></div><div class="top-actions">${button('compose',icon('plus',15)+'<span>Talep yaz</span>','quiet')}<label class="role">${icon('user',15)}<select id="role" aria-label="Demo rolü">${Object.entries(E.roles).map(([k,v])=>`<option value="${k}" ${role===k?'selected':''}>${esc(v)}</option>`).join('')}</select></label></div></header>`;
+}
+const sampleInfo={DISCOVER:'Mevcut ürün kullanım ve net geliri birlikte karşılıyor mu?',BUILD:'Network TAP3 ile Billing verisinden yeni ürün oluştur.',CONSUME:'En yüksek roaming kullanımını ülkelere göre karşılaştır.',IMPROVE:'Geç gelen partition için kaynağı bul ve aksiyon kaydet.',AUDIT:'Onay, test ve yayın kanıtlarını kaynak kayda kadar izle.'};
+function home(){
+ const s=session(),recent=[...s.cases].reverse(),factCount=db.facts.length;
+ return `<div class="crumb">Workspace <b>/</b> Genel bakış</div><section class="hero"><div class="hero-copy"><div class="eyebrow hero-label"><i></i> ROAMING WORKSPACE</div><h1>Roaming veri<br>çalışma alanı</h1><p>Network kullanımından net gelire uzanan talebi yürüt. Bir adımda üretilen bilgiyi sonraki talepte kaynağıyla birlikte kullan.</p><div class="actions">${button('start-discover',icon('search',16)+' Keşifle başla','primary')}${button('tour',icon('play',15)+' Örnek oturumu aç','glass')}</div></div><div class="hero-map" aria-label="Mevcut bağlam kayıtları"><div class="map-top"><span>CONTEXT FOUNDATION</span><span>${factCount} kayıt</span></div><div class="map-core">${icon('db',23)}<div><b>Roaming</b><small>Domain context</small></div></div><div class="map-branch"></div><div class="map-leaves"><span><i></i>Network TAP3</span><span><i></i>Billing</span><span><i></i>POL-PRV-021</span></div></div></section>
+ <div class="section-title"><div><h2>Talep yolculukları</h2><p>Talep türüne göre agent’lar servisleri seçer. Seçilen servisler, açılacak adımları belirler.</p></div></div><div class="journeys">${Object.entries(E.groups).map(([id,item])=>`<button class="journey-card ${item.color}" data-sample="${id}">${groupMark(id)}<div><small>${item.name} · ${E.chooseServices(id).steps.length} adım</small><h3>${item.label}</h3><p>${sampleInfo[id]}</p></div><span class="card-go" aria-hidden="true">${icon('arrow',15)}</span></button>`).join('')}</div>
+ <div class="section-title"><div><h2>Bu oturumdaki talepler</h2><p class="mono">${s.id}</p></div>${button('sessions','Oturumları göster','quiet')}</div>${recent.length?recent.map(c=>caseCard(c)).join(''):`<div class="empty-inline">${icon('chat',22)}<div><b>İlk talep için hazır</b><span>Bir yolculuk seçtiğinde Lifecycle ID oluşur.</span></div></div>`}`;
+}
+function caseCard(c){return `<article class="case-card"><div class="case-title">${icon('folder',21)}<div><small class="mono">${esc(c.id)}</small><h3>${esc(c.title)}</h3></div></div><div class="group-list">${c.groups.map((g,i)=>`<button data-group="${esc(g.id)}" class="group-chip ${E.groups[g.group].color}">${i+1} · ${E.groups[g.group].name} ${E.finished(g)?icon('check',13):''}</button>`).join('')}</div></article>`}
+function history(){
+ return `<div class="crumb">Workspace <b>/</b> Talep geçmişi</div><div class="page-title"><div><h1>Talep geçmişi</h1><p>Aynı talebin farklı grupları aynı Lifecycle ID altında birikir. Her grup kendi sayfalarına ve kanıtlarına açılır.</p></div>${button('new-session',icon('plus',16)+' Yeni oturum','secondary')}</div>${[...db.sessions].reverse().map(s=>`<section class="history-session"><div class="section-title"><div><span class="eyebrow">SESSION ID</span><h2 class="mono">${s.id}</h2></div>${s.id===session().id?pill('Açık oturum','mint'):`<button class="text-link" data-session="${s.id}">Oturuma dön</button>`}</div>${s.cases.length?s.cases.map(caseCard).join(''):blank('Bu oturumda henüz talep açılmadı.')}</section>`).join('')}`;
+}
+function compose(initial=''){
+ draft=initial;clarification=null;
+ modal('Talebini yaz',`<form id="request-form"><label for="request-text">Veriyle hangi çıktıyı elde etmek istiyorsun?</label><textarea required id="request-text" maxlength="1500" rows="4" placeholder="Örneğin, bu ürünün mimari onayını ve test kanıtlarını göster.">${esc(draft)}</textarea><small>${esc(session().id)}${theCase()?' · Açık talep '+theCase().id:''} · Roaming demo kataloğu</small><div class="suggest"><b>Örnek talepler</b><div>${Object.keys(E.groups).map(k=>button('fill',E.groups[k].name,'tiny',`data-kind="${k}"`)).join('')}${button('fill','Ayrı aylık rapor','tiny','data-kind="MONTHLY"')}</div></div><div id="request-feedback" role="status"></div><div class="actions">${button('cancel','Vazgeç','quiet')}<button type="submit" class="btn primary">Talebi gönder</button></div></form>`);
+ $('request-text').focus();
+}
+function start(text,relation){
+ try{
+  const g=E.start(db,text,relation);
+  if(g.clarify){
+   if(!$('request-text'))compose(text);
+   clarification=text;
+   $('request-feedback').innerHTML=notice('Talebin ilişkisi netleşmeli','Bu iş mevcut talebin devamı mı, ayrı bir çıktı mı?','warn')+
+    '<div class="actions">'+button('same','Aynı talebi sürdür','secondary')+button('separate','Ayrı talep olarak aç','secondary')+'</div>';
+   return;
+  }
+  const casesession=E.activeCase(db);
+  go('work');toast(casesession.id+' · '+E.groups[g.group].name+' · '+g.reason);
+ }catch(e){if($('request-feedback')&&$('dialog').open)$('request-feedback').innerHTML=notice('Talep bekliyor',e.message,'warn');else toast(e.message)}
+}
+function startSample(kind){const text=kind==='MONTHLY'?E.monthly:E.nextText(db,kind);start(text)}
+function pageMove(p){
+ const g=active();if(!g)return;
+ if(!E.enter(db,g,p)){
+  if(p==='intake'&&g.group==='BUILD'&&!E.ready(g,'demand')){previewPage='intake';view='work';mobileNav=false;render();window.scrollTo(0,0);return}
+  const before=g.plan.steps.find(k=>!E.ready(g,k));toast(pageName(before)+' adımındaki girdi veya onay bekleniyor.');return;
+ }
+ previewPage=null;go('work');
+}
+function advance(g,style='primary'){
+ const i=g.plan.steps.indexOf(g.page),next=g.plan.steps[i+1];
+ if(!next)return '';
+ return button('next',esc(pageName(next))+' adımına geç',style,E.ready(g,g.page)?'':'disabled');
+}
+function idStrip(g){return `<div class="id-strip"><span>Session <b>${g.session}</b></span><span>Lifecycle <b>${g.lifecycle}</b></span><span>Grup <b>${g.group} / ${esc(g.id.split('/').at(-1))}</b></span></div>`}
+function work(){
+ const g=active(),p=previewPage||g.page,i=g.plan.steps.indexOf(p),r=g.runs.filter(x=>x.page===p),meta=E.groups[g.group];
+ const header=`<div class="crumb"><button data-view="home">Workspace</button><b>/</b>${esc(theCase().title)}<b>/</b>${meta.name}</div><div class="work-lead"><div class="head-label">${groupMark(g.group)}<span>${meta.name.toUpperCase()}<b> / </b> ADIM ${i+1} / ${g.plan.steps.length}</span></div><div class="page-title"><div><h1>${esc(pageName(p))}</h1><p>${esc(V.descriptors[p]||E.pages[p].sub)}</p></div>${!previewPage&&E.ready(g,p)?advance(g,'secondary'):''}</div>${idStrip(g)}${g.mode==='guided'?'<div class="mode-note">Sunum oturumu · örnek rol onayları ve girdilerle çalıştırıldı.</div>':''}</div>`;
+ if(previewPage)return header+panel('Intake için eksik talep bilgisi',notice('Talep Demand adımında tamamlanmalı',['owner','purpose','sla'].filter(k=>!g.context[k]).map(k=>E.fields[k].label).join(' · ')||'Talep sahibi henüz bilgileri onaylamadı.','warn')+`<p>BRD ve Jira servisleri talep bilgileri onaylandığında açılır.</p><button class="btn primary" data-page="demand">Demand’a dön</button>`)+panel('Activity Evidence',blank('Intake adımında henüz servis çalışmadı.'));
+ const intro=p==='live'?V.dashboard(g):V.pageMetrics(db,g);
+ const mainContent=p==='live'?'':V.contextContent(db,g);
+ return header+intro+`<div class="work-cols"><div class="primary-col">${mainContent}${chat(g)}${services(g)}${archTrace(g)}${E.ready(g,p)?(i<g.plan.steps.length-1?`<div class="next-box"><span>${icon('check',16)} Bu adım tamamlandı.</span>${advance(g)}</div>`:followup(g)):''}</div><aside class="inspector">${pageEvidence(g,r)}${contextPanel(g)}${groupHistory(g)}</aside></div>`;
+}
+function chat(g){
+ const x=E.pending(g);if(!x)return '';
+ const k=x.fields.find(key=>!g.context[key]),actor=E.roles[x.approval],logs=g.inputs.filter(m=>m.page===g.page),decisions=g.decisions.filter(d=>d.page===g.page);
+ const info={owner:'Bu roaming ürününün iş sahibi kim?',purpose:'Bu veri ürünü hangi iş kararını destekleyecek?',sla:'Veri ne zaman hazır olmalı ve beklenen tamlık nedir?',businessRules:'Net gelir ve geç gelen kayıtlar için hangi iş kurallarını uygulayalım?',successMetrics:'Bu ürünün kabulü için başarı metrikleri ve eşikler neler?',stakeholders:'Analize hangi iş ve teknik paydaşları dahil edelim?',nfr:'Teknik tasarımda yükleme, yeniden işleme ve saklama beklentileri neler?',language:'ETL hangi teknolojiyle ve hangi ortamda geliştirilsin?',releaseWindow:'Yayın penceresi, rollback süresi ve sorumlu ekip nedir?',consumerPurpose:'Bu tüketici veriyi hangi amaçla, hangi kapsamda kullanacak?',actionOwner:'Aksiyonu kim üstlenecek ve hangi koşulda takip edecek?'};
+ const prompt=k?info[k]||E.fields[k].label:x.name+' için girdiler hazır. '+actor+' onayıyla servis çalışacak.';
+ return panel('Servis sohbeti',`<div id="chat-panel" class="chat-area">${logs.length||decisions.length?`<details><summary>Bu sayfadaki sohbet ve kararlar (${logs.length+decisions.length})</summary>${logs.map(l=>`<p><b>${esc(E.fields[l.field]?.label||l.field)}</b> · ${esc(l.value)}</p>`).join('')}${decisions.map(d=>`<p>${esc(E.roles[d.actor])} · ${d.decision==='APPROVED'?'Onaylandı':'Düzeltmeye döndü'}</p>`).join('')}</details>`:''}
+ <div class="chat-bubble"><span class="agent-dot">${icon('chat',16)}</span><div><small>${esc(x.cap)} Agent · ${esc(x.id)}</small><p>${esc(prompt)}</p></div></div>
+ ${k?`<form id="answer-form"><label for="answer">${esc(E.fields[k].label)}</label><textarea id="answer" rows="2" maxlength="1500" required placeholder="Yanıtınızı yazın…"></textarea><div class="actions">${button('sample-answer','Örnek yanıtı doldur','quiet')}<button class="btn primary" type="submit">Yanıtı gönder</button></div></form>`:
+ `<div class="approval">${kv({'Servis':x.name,'Onay rolü':actor})}${role===x.approval?`<div class="actions">${button('approve','Onayla ve çalıştır','primary')}${button('reject','Düzeltme iste','quiet')}</div>`:`<div class="actions">${button('as-role',esc(actor)+' rolüne geç','secondary')}<small>Şu an ${esc(E.roles[role])}</small></div>`}</div>`}</div>`,pill(k?'Bilgi bekliyor':'Onay bekliyor','gold'));
+}
+function services(g){
+ const xs=E.selected(g,g.page);
+ return panel('Servis çalışmaları',`<div class="service-list">${xs.map(x=>{
+ const r=g.runs.find(r=>r.serviceId===x.id),pending=E.pending(g)?.id===x.id;
+ const s=r?'Tamamlandı':pending?(x.fields.some(k=>!g.context[k])?'Girdi bekliyor':'Onay bekliyor'):'Önkoşul bekliyor';
+ return `<article class="service-row"><span class="service-state ${r?'done':pending?'wait':''}">${icon(r?'check':pending?'clock':'lock',15)}</span><div><div class="service-head"><b>${esc(x.name)}</b>${pill(s,r?'mint':pending?'gold':'neutral')}</div><small>${esc(x.cap)} · ${esc(x.runtime)}</small>${r?`<p>${esc(E.summary(r.output))}</p>`:''}<div class="service-links"><button class="text-link" data-svc="${x.id}">Girdi sözleşmesi</button>${r?evidenceLink(r.evidenceId):''}</div></div></article>`;
+ }).join('')}</div>`,pill(xs.length+' servis'));
+}
+function archTrace(g){
+ const r=g.route.find(x=>x.page===g.page);
+ return panel('Architecture Trace',`<div class="route-summary">${icon('flow',20)}<div><b>Lifecycle Orchestrator</b><small>${esc(g.group)} intent’ini ilgili capability agent’lara yönlendirdi.</small></div></div>${r.capabilities.map(a=>`<div class="route-item"><b>${esc(a.capability)} Agent</b><span>${esc(a.selectedServices.join(' · '))}</span></div>`).join('')}<p class="help">Her agent kendi servislerini seçer, çıktısını değerlendirir ve Context Foundation’a işler.</p>`);
+}
+function pageEvidence(g,runs){
+ return panel('Activity Evidence',runs.length?`<div class="evidence-list">${runs.map(r=>`<button data-ev="${r.evidenceId}"><span class="dot"></span><span><b>${esc(r.name)}</b><small class="mono">${r.evidenceId} · ${humanTime(r.at)}</small></span></button>`).join('')}</div>`:blank('Bu sayfada henüz servis çalışmadı.'),pill(runs.length+' iz','mint'));
+}
+function contextPanel(g){
+ const facts=E.factsOnPage(db,g,g.page),earlier=E.reuseOnGroup(db,g),shown=facts.slice(-5).reverse();
+ return panel('Lifecycle Context',`<small class="small-caption">BU ADIMA KADAR</small>${shown.map(f=>`<button class="fact-mini" data-fact="${f.id}"><small>${esc(f.seed?'Başlangıç kataloğu':f.segment===g.id?'Bu grupta üretildi':'Önceki gruptan')}</small><b>${esc(f.title)}</b><span>${esc(f.value)}</span></button>`).join('')||blank('İlk servis sonucunda bağlam görünür.')}${button('page-context','Tüm bağlam ('+facts.length+')','quiet')}`,pill(facts.filter(f=>earlier.some(x=>x.id===f.id)).length+' devralınan','violet'));
+}
+function groupHistory(g){return panel('Talep bağlamı',`<p class="plain">${esc(g.reason)}.</p><div class="group-list">${theCase().groups.map((item,i)=>`<button data-group="${esc(item.id)}" class="group-chip ${E.groups[item.group].color}" title="${esc(item.request)}">${i+1} · ${E.groups[item.group].name}</button>`).join('')}</div>${button('compose','Sonraki talebi yaz','quiet')}`)}
+function followup(g){
+ const next={DISCOVER:E.output(g,'DS-REUSE')?.recommendation||'BUILD',BUILD:'CONSUME',CONSUME:'IMPROVE',IMPROVE:'AUDIT',AUDIT:'CONSUME'}[g.group];
+ return panel('Bu bağlamla devam et',`<p>${g.group==='BUILD'?'Yayına alınan ürün sözleşmesi, kalite profili ve karar kanıtları sonraki talepte kullanılabilir.':'Sonraki istek bu taleple ilişkiliyse Lifecycle ID korunur. Ayrı bir iş çıktısı yeni Lifecycle ID alır.'}</p><div class="actions"><button class="btn primary" data-sample="${next}">${E.groups[next].name} talebini başlat</button><button class="btn secondary" data-sample="MONTHLY">Ayrı aylık rapor talebi</button></div>`);
+}
+function evidenceDetails(id){
+ const r=E.allRuns(db).find(r=>r.evidenceId===id);if(!r)return;
+ const g=E.allGroups(db).find(g=>g.id===r.segment),d=g.decisions.find(d=>d.id===r.decision);
+ modal(r.name,`<div class="minihead">${pill(r.status,'mint')}${pill(g.group,E.groups[g.group].color)}</div>${kv({'Evidence ID':r.evidenceId,'Trace ID':r.traceId,'Adım':pageName(r.page),'Capability Agent':r.capability,'Runtime':r.runtime,'Yürütme':r.executionId+' · '+humanTime(r.at)+' · '+r.durationMs+' ms (demo)','Onay kararı':d?d.id+' · '+E.roles[d.actor]:'Context ile otomatik','Context sürümü':'v'+r.contextVersion})}<h3>Bağlı önceki kanıtlar</h3><div class="actions">${r.parentEvidence.length?r.parentEvidence.map(evidenceLink).join(''):esc('Başlangıç kaydı')}</div><h3>Okunan bağlam</h3>${(r.read||[]).length?r.read.map(id=>`<button class="text-link mono" data-fact="${id}">${id}</button>`).join(' · '):'<p class="muted">Girdiler talep veya önkoşul servisinden geldi.</p>'}<details><summary>Servis girdisi</summary><pre>${esc(JSON.stringify(r.input,null,2))}</pre></details><details open><summary>Servis sonucu</summary><pre>${esc(JSON.stringify(r.output,null,2))}</pre></details>`);
+}
+function factDetails(id){
+ const f=db.facts.find(f=>f.id===id);if(!f)return;
+ modal(f.title,`<div class="minihead">${pill(f.seed?'Başlangıç kataloğu':'Agent çıktısı',f.seed?'blue':'mint')}<small class="mono">${f.id}</small></div><p>${esc(f.value)}</p>${kv({'Kaynak':f.source,'Lifecycle':f.lifecycle,'Grup kaydı':f.segment,'Adım':f.page&&pageName(f.page)})}${f.ev?'<h3>Kaynak kanıt</h3>'+evidenceLink(f.ev):'<p class="help">Bu kayıt demo başlamadan önce katalogda vardı.</p>'}`);
+}
+function factsList(facts){
+ return `<div class="foundation-list">${facts.map(f=>`<button data-fact="${f.id}"><span class="fact-symbol">${icon(f.seed?'db':'layers',18)}</span><span><small>${esc(f.id)} · ${esc(f.seed?f.source:f.segment)}</small><b>${esc(f.title)}</b><span>${esc(f.value)}</span></span></button>`).join('')}</div>`;
+}
+function foundation(){const f=db.facts;return `<div class="crumb">Workspace <b>/</b> Context Foundation</div><div class="page-title"><div><h1>Context Foundation</h1><p>Kurumsal katalogdan gelen bilgilerin ve capability agent çıktılarının kaynağını incele.</p></div></div>${metrics([['Başlangıç kataloğu',f.filter(x=>x.seed).length,'Demo öncesi kayıt'],['Üretilen bağlam',f.filter(x=>!x.seed).length,'Gerçekleşen demo servislerinden'],['Talep grupları',E.allGroups(db).length,'Bu tarayıcıdaki oturumlar']])}${panel('Bağlam kayıtları',factsList([...f].reverse()))}`}
+function ledger(){const all=E.allRuns(db).sort((a,b)=>b.contextVersion-a.contextVersion);return `<div class="crumb">Workspace <b>/</b> Kanıt kayıtları</div><div class="page-title"><div><h1>Kanıt kayıtları</h1><p>Her satır çalıştırılan bir servise aittir. Kaynak girdileri, kullanılan runtime ve önceki kanıtlar aynı iz üzerinden açılır.</p></div>${button('export',icon('download',15)+' JSON indir','secondary')}</div>${panel('Servis yürütmeleri',all.length?`<div class="tablebox"><table><thead><tr><th>Kanıt</th><th>Servis</th><th>Grup / adım</th><th>Lifecycle</th></tr></thead><tbody>${all.map(r=>`<tr><td>${evidenceLink(r.evidenceId)}</td><td>${esc(r.name)}</td><td>${esc(r.group)} · ${esc(pageName(r.page))}</td><td class="mono">${esc(r.lifecycle)}</td></tr>`).join('')}</tbody></table></div>`:blank('Henüz servis çalışmadı.'),pill(all.length+' yürütme','mint'))}`}
+function contract(id){
+ const x=E.spec[id],raw=window.SERVICE_CONTRACTS[id],g=active();
+ modal(x.name+' · Girdi sözleşmesi',`<div class="minihead">${pill(x.id)}${pill(x.runtime,'violet')}</div>${raw?`<p>Paylaşılan 34 servislik Atomic Service Playbooks çalışmasındaki girdiler.</p>${table(['Excel alanı','Zorunluluk'],raw.inputs.map(i=>[i.field,i.requirement]))}`:'<p>DOKU platformu için demo servis sözleşmesi.</p>'}${kv({'Önceki servisler':E.deps(g,x).join(' · ')||'Başlangıç kataloğu / talep','Sohbette alınanlar':x.fields.filter(k=>E.fields[k]&&k!=='request').map(k=>E.fields[k].label).join(' · ')||'Mevcut bağlam','Yürütme':x.approval?E.roles[x.approval]+' onayı':'Önkoşullar hazır olduğunda otomatik'})}`);
+}
+function architecture(){modal('Mimari akış',`<div class="architecture"><div>${icon('chat')}<span><b>Unified UI</b><p>Oturum ve talep aynı yüzeyden takip edilir.</p></span></div><div>${icon('flow')}<span><b>Lifecycle Orchestrator</b><p>Case Creator talep bağlamını ayırır. Orchestrator intent’i ilgili capability agent’lara gönderir.</p></span></div><div>${icon('layers')}<span><b>Capability Agents</b><p>Classification / Discovery, Governance, Quality, Documentation, Prioritization ve Observability kendi servislerini seçer. Eksik girdiyi ve onayı yönetir.</p></span></div><div>${icon('activity')}<span><b>Servis yürütmesi</b><p>SDLC hizmetleri TARS’ta, üretim verisi gerektiren analizler kontrollü model uçlarında, uygulama yazımları adapter’larda çalışır.</p></span></div><div>${icon('db')}<span><b>Context Foundation</b><p>Servis sonucu capability agent’a döner. Agent sonucu, kararı ve kaynak kanıtı context’e işler.</p></span></div></div>`)}
+function download(){
+ const data={simulation:true,schema:4,sessions:db.sessions.map(s=>({session_id:s.id,lifecycles:s.cases.map(c=>({lifecycle_id:c.id,title:c.title,groups:c.groups.map(g=>({lifecycle_group:g.group,group_id:g.id,execution_mode:g.mode||'manual',request:g.request,created:g.created,closed:g.closed,routing:g.route,inputs:g.inputs,decisions:g.decisions,executions:g.runs}))}))})),context_foundation:db.facts};
+ const url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='DOKU_Oturum_Kanitlari.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),800);
+}
+function render(){
+ if(view==='work'&&!active())view='home';store();const screens={home,work,context:foundation,history,evidence:ledger};
+ $('app').innerHTML=`<div class="layout">${sidebar()}${mobileNav?'<button data-a="menu" class="scrim" aria-label="Menüyü kapat"></button>':''}<main>${topbar()}<div class="canvas">${screens[view]()}<footer><span>DOKU / DataOps Studio</span><span>Sentetik veri · Tarayıcıda çalışan demo${storageOk?'':' · Kalıcı kayıt kullanılamıyor'}</span></footer></div></main></div>`;
+}
+const actions={
+ menu(){mobileNav=!mobileNav;render()},cancel:close,compose(){compose()},'start-discover'(){startSample('DISCOVER')},
+ 'fill'(b){const k=b.dataset.kind;$('request-text').value=k==='MONTHLY'?E.monthly:E.nextText(db,k);$('request-text').focus();$('request-feedback').innerHTML='';clarification=null},
+ same(){start(clarification,'same')},separate(){start(clarification,'new')},'sessions'(){go('history')},'new-session'(){E.newSession(db);go('home');toast('Yeni oturum açıldı.');},
+ tour(){modal('Örnek oturumu aç',`<p>Discover, Build, Consume, Improve ve Audit adımlarını ayrı bir demo oturumunda çalıştırır. Sohbet girdileri ve rol onayları örnek değerlerle verilir. Sonuçta canlı veri ürününün panosu açılır.</p>${notice('İkinci talep','Aylık pazarlama raporu aynı session içinde yeni Lifecycle ID alır. Kaynağı önceki üründür.')}<div class="actions">${button('play-tour','Örnek oturumu çalıştır','primary')}${button('cancel','Vazgeç','quiet')}</div>`)},
+ 'play-tour'(){E.runExample(db);go('work');toast('Örnek oturum tamamlandı. Talep geçmişinden her grubu açabilirsin.')},
+ next(){const g=active(),i=g.plan.steps.indexOf(g.page);if(E.ready(g,g.page)&&g.plan.steps[i+1])pageMove(g.plan.steps[i+1])},
+ 'to-chat'(){document.getElementById('chat-panel')?.scrollIntoView({block:'center'})},
+ 'sample-answer'(){const g=active(),x=E.pending(g),k=x.fields.find(k=>!g.context[k]);$('answer').value=E.fields[k].sample;$('answer').focus()},
+ 'as-role'(){role=E.pending(active()).approval;render();$('chat-panel')?.scrollIntoView({block:'center'})},
+ approve(){const g=active();E.decide(db,g,E.pending(g).id,role,true);render();toast('Onay kaydedildi. Servis sonucu ve kanıtı hazır.')},
+ reject(){const g=active(),x=E.pending(g);E.decide(db,g,x.id,role,false);for(const key of x.fields)delete g.context[key];render();toast('İstek düzeltmeye döndü. Servis çalıştırılmadı.')},
+ 'page-context'(){const g=active();modal(pageName(g.page)+' · Lifecycle Context',factsList([...E.factsOnPage(db,g,g.page)].reverse()))},
+ architecture,export:download
+};
+document.addEventListener('click',e=>{
+ const b=e.target.closest('button');if(!b||b.disabled)return;
+ try{
+  if(b.dataset.view)return go(b.dataset.view);
+  if(b.dataset.group){E.selectGroup(db,b.dataset.group);return go('work')}
+  if(b.dataset.page)return pageMove(b.dataset.page);
+  if(b.dataset.sample)return startSample(b.dataset.sample);
+  if(b.dataset.ev)return evidenceDetails(b.dataset.ev);
+  if(b.dataset.fact)return factDetails(b.dataset.fact);
+  if(b.dataset.svc)return contract(b.dataset.svc);
+  if(b.dataset.session){db.activeSession=b.dataset.session;return go('home')}
+  if(b.dataset.a)actions[b.dataset.a]?.(b);
+ }catch(err){toast(err.message)}
+});
+document.addEventListener('submit',e=>{
+ if(e.target.id==='request-form'){e.preventDefault();start($('request-text').value.trim());return}
+ if(e.target.id==='answer-form'){
+  e.preventDefault();const g=active(),x=E.pending(g),k=x.fields.find(f=>!g.context[f]);if(!k)return;
+  try{E.input(g,x.id,k,$('answer').value);render();if($('answer'))$('answer').focus();else $('chat-panel')?.scrollIntoView({block:'center'})}catch(err){toast(err.message)}
+ }
+});
+document.addEventListener('change',e=>{if(e.target.id==='role'){role=e.target.value;render()}});
+$('dialog').addEventListener('click',e=>{if(e.target===$('dialog'))close()});
+window.addEventListener('storage',e=>{if(e.key!==storage||!e.newValue)return;try{const updated=JSON.parse(e.newValue);if(updated.schema===4){db=updated;previewPage=null;close();render()}}catch{}});
+if(location.hash==='#journeys')view='home';render();
+})();
+</script></body></html>
